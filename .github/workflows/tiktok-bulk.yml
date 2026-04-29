@@ -68,7 +68,7 @@ jobs:
           )"
 
           if [ -z "$COMMAND" ]; then
-            echo "❌ No supported download command found."
+            echo "No supported download command found."
             echo ""
             echo "Use one of:"
             echo "  tiktok-download:"
@@ -80,13 +80,15 @@ jobs:
 
           case "$COMMAND" in
             tiktok-zip|download-zip)
-              MODE="zip"
+              MODE="normal"
+              echo "Note: ZIP mode no longer creates split archives."
+              echo "Files larger than 90MB will be ignored instead."
               ;;
             tiktok-download|download)
               MODE="normal"
               ;;
             *)
-              echo "❌ Unsupported command: $COMMAND"
+              echo "Unsupported command: $COMMAND"
               exit 1
               ;;
           esac
@@ -116,7 +118,7 @@ jobs:
           )"
 
           if [ -z "$URLS" ]; then
-            echo "❌ No URLs found after '$COMMAND:'."
+            echo "No URLs found after '$COMMAND:'."
             echo ""
             echo "Correct example:"
             echo "tiktok-download:"
@@ -150,25 +152,23 @@ jobs:
             [ -z "$URL" ] && continue
 
             echo ""
-            echo "⬇️ Downloading:"
+            echo "Downloading:"
             echo "$URL"
 
             BEFORE_COUNT="$(count_files)"
 
-            # Important:
-            # We do NOT use --impersonate chrome here.
+            # We use --max-filesize 90M so yt-dlp skips videos that it knows
+            # are larger than 90MB before downloading them.
             #
-            # Why?
-            # Your runner showed:
-            #   Impersonate target "chrome" is not available
-            #
-            # That means yt-dlp could not use that impersonation target.
-            # Removing it makes the workflow portable and prevents this crash.
+            # Why still clean up later?
+            # Some sites do not always expose file size before download,
+            # so a second safety check removes oversized files after download.
             if yt-dlp \
               --ignore-errors \
               --no-abort-on-error \
               --no-mtime \
               --download-archive downloaded_archive.txt \
+              --max-filesize 90M \
               --format "bv*+ba/b" \
               --merge-output-format mp4 \
               "${COOKIES_ARGS[@]}" \
@@ -184,60 +184,69 @@ jobs:
             AFTER_COUNT="$(count_files)"
 
             if [ "$EXIT_CODE" -ne 0 ]; then
-              echo "⚠️ yt-dlp returned exit code $EXIT_CODE for:"
+              echo "yt-dlp returned exit code $EXIT_CODE for:"
               echo "$URL"
               YTDLP_HAS_ERRORS=1
             fi
 
             if [ "$AFTER_COUNT" -gt "$BEFORE_COUNT" ]; then
-              echo "✅ New file downloaded for this URL."
+              echo "New file downloaded for this URL."
               SUCCESSFUL_URLS=$((SUCCESSFUL_URLS + 1))
             else
-              echo "⚠️ No new file appeared for this URL."
+              echo "No new file appeared for this URL."
               echo "Possible reasons:"
               echo "  1. It was already downloaded and listed in downloaded_archive.txt"
               echo "  2. TikTok blocked public access"
               echo "  3. The URL is invalid or unavailable"
               echo "  4. Cookies are required"
+              echo "  5. The video is larger than 90MB and was skipped"
             fi
           done <<< "$URLS"
 
           TOTAL_FILES="$(count_files)"
           echo ""
-          echo "Total files currently in tmp_downloads: $TOTAL_FILES"
+          echo "Total files currently in tmp_downloads before size cleanup: $TOTAL_FILES"
 
           if [ "$TOTAL_FILES" -eq 0 ]; then
             if [ "$YTDLP_HAS_ERRORS" -eq 1 ]; then
-              echo "❌ No files were downloaded and at least one yt-dlp error occurred."
+              echo "No files were downloaded and at least one yt-dlp error occurred."
               exit 1
             fi
 
-            echo "ℹ️ No new files downloaded. They may already be archived."
+            echo "No new files downloaded. They may already be archived or larger than 90MB."
             exit 0
           fi
 
-          if [ "$MODE" = "zip" ]; then
-            echo "📦 Creating split ZIP archive..."
+          echo ""
+          echo "Removing downloaded video files larger than 90MB..."
 
-            ARCHIVE_BASE="tiktok_bulk_$(date +%Y%m%d_%H%M%S)"
+          find tmp_downloads -type f \( \
+            -iname "*.mp4" -o \
+            -iname "*.mov" -o \
+            -iname "*.mkv" -o \
+            -iname "*.webm" \
+          \) -size +90M -print0 | while IFS= read -r -d '' file; do
+            size_bytes="$(stat -c%s "$file")"
+            echo "Ignoring oversized video: $file (${size_bytes} bytes)"
+            rm -f -- "$file"
+          done
 
-            (
-              cd tmp_downloads
-              zip -r -s 90m "../downloads/${ARCHIVE_BASE}.zip" .
-            )
+          TOTAL_FILES_AFTER_CLEANUP="$(count_files)"
+          echo ""
+          echo "Total files currently in tmp_downloads after size cleanup: $TOTAL_FILES_AFTER_CLEANUP"
 
-            echo "Created archive parts:"
-            ls -lh downloads/${ARCHIVE_BASE}* || true
-
-          else
-            echo "📁 Copying downloaded files to downloads/..."
-            cp -a tmp_downloads/. downloads/
+          if [ "$TOTAL_FILES_AFTER_CLEANUP" -eq 0 ]; then
+            echo "All downloaded files were larger than 90MB, so nothing will be committed."
+            exit 0
           fi
+
+          echo "Copying downloaded files to downloads/..."
+          cp -a tmp_downloads/. downloads/
 
           rm -rf tmp_downloads
 
           if [ "$YTDLP_HAS_ERRORS" -eq 1 ]; then
-            echo "⚠️ Some URLs had errors, but at least one file was downloaded."
+            echo "Some URLs had errors, but at least one valid file was downloaded."
             echo "Continuing so successful downloads can be committed."
           fi
 
@@ -250,6 +259,21 @@ jobs:
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
+          echo "Final safety check: removing videos larger than 90MB from downloads/ before commit..."
+
+          if [ -d downloads ]; then
+            find downloads -type f \( \
+              -iname "*.mp4" -o \
+              -iname "*.mov" -o \
+              -iname "*.mkv" -o \
+              -iname "*.webm" \
+            \) -size +90M -print0 | while IFS= read -r -d '' file; do
+              size_bytes="$(stat -c%s "$file")"
+              echo "Removing oversized video before commit: $file (${size_bytes} bytes)"
+              rm -f -- "$file"
+            done
+          fi
 
           git add downloads/ downloaded_archive.txt
 
