@@ -3118,3 +3118,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-04-30T12:47:11Z] Copying downloaded files to downloads
 [2026-04-30T12:47:11Z] Preparing commit for: batch-10-after-50-successful-downloads
 [2026-04-30T12:47:11Z] Removing video files larger than 90MB from: downloads
+[main 3111131] Add downloaded TikTok files batch-10-after-50-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/eden.gross/@eden.gross_2023-09-19_TikTok video #7280371909269835054_7280371909269835054.mp4
+ create mode 100644 downloads/eden.gross/@eden.gross_2023-09-21_get dressed with me_7281414792919649579.mp4
+ create mode 100644 "downloads/eden.gross/@eden.gross_2023-09-26_that\342\200\231s true that i like pda_7283184875526524203.mp4"
+ create mode 100644 downloads/eden.gross/@eden.gross_2023-10-02_TikTok video #7285172071515163935_7285172071515163935.mp4
+ create mode 100644 downloads/eden.gross/@eden.gross_2023-10-04_TikTok video #7285967499508632863_7285967499508632863.mp4
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   8ebeae0..3111131  HEAD -> main
+[2026-04-30T12:47:13Z] Batch committed and pushed successfully: batch-10-after-50-successful-downloads
+[2026-04-30T12:47:13Z] Processing URL #51:
+[2026-04-30T12:47:13Z] https://www.tiktok.com/@eden.gross/video/7285983420830895406
+[TikTok] Extracting URL: https://www.tiktok.com/@eden.gross/video/7285983420830895406
+[TikTok] 7285983420830895406: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7285983420830895406: Downloading 1 format(s): bytevc1_1080p_2264293-1
+[download] Destination: tmp_downloads/eden.gross/@eden.gross_2023-10-04_my 90s yearbook photos📚 #aiyearbook #90syearbook #AgostoDump #fyp _7285983420830895406.mp4
+[download]   0.0% of    2.24MiB at  Unknown B/s ETA Unknown[download]   0.1% of    2.24MiB at  Unknown B/s ETA Unknown[download]   0.3% of    2.24MiB at    6.25MiB/s ETA 00:00  [download]   0.7% of    2.24MiB at   10.89MiB/s ETA 00:00[download]   1.4% of    2.24MiB at   13.31MiB/s ETA 00:00[download]   2.7% of    2.24MiB at    3.74MiB/s ETA 00:00[download]   5.5% of    2.24MiB at    5.41MiB/s ETA 00:00[download]  11.1% of    2.24MiB at    5.74MiB/s ETA 00:00[download]  22.3% of    2.24MiB at    6.78MiB/s ETA 00:00[download]  44.7% of    2.24MiB at    9.30MiB/s ETA 00:00[download]  89.3% of    2.24MiB at   13.76MiB/s ETA 00:00[download] 100.0% of    2.24MiB at   15.11MiB/s ETA 00:00[download] 100% of    2.24MiB in 00:00:00 at 6.20MiB/s   
+[2026-04-30T12:47:15Z] New file downloaded for this URL.
+[2026-04-30T12:47:15Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:47:15Z] Copying downloaded files to downloads
+[2026-04-30T12:47:15Z] Processing URL #52:
+[2026-04-30T12:47:15Z] https://www.tiktok.com/@eden.gross/video/7286682075170753834
+[TikTok] Extracting URL: https://www.tiktok.com/@eden.gross/video/7286682075170753834
+[TikTok] 7286682075170753834: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7286682075170753834: Downloading 1 format(s): bytevc1_1080p_1312325-1
+[download] Destination: tmp_downloads/eden.gross/@eden.gross_2023-10-06_TikTok video #7286682075170753834_7286682075170753834.mp4
+[download]   0.1% of    1.57MiB at  Unknown B/s ETA Unknown[download]   0.2% of    1.57MiB at  Unknown B/s ETA Unknown[download]   0.4% of    1.57MiB at    6.56MiB/s ETA 00:00  [download]   0.9% of    1.57MiB at   11.03MiB/s ETA 00:00[download]   1.9% of    1.57MiB at   16.71MiB/s ETA 00:00[download]   3.9% of    1.57MiB at    3.77MiB/s ETA 00:00[download]   7.9% of    1.57MiB at    5.54MiB/s ETA 00:00[download]  15.9% of    1.57MiB at    4.98MiB/s ETA 00:00[download]  31.8% of    1.57MiB at    6.73MiB/s ETA 00:00[download]  63.7% of    1.57MiB at    9.29MiB/s ETA 00:00[download] 100.0% of    1.57MiB at   12.25MiB/s ETA 00:00[download] 100% of    1.57MiB in 00:00:00 at 4.23MiB/s   
+[2026-04-30T12:47:16Z] New file downloaded for this URL.
+[2026-04-30T12:47:16Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:47:16Z] Copying downloaded files to downloads
+[2026-04-30T12:47:16Z] Processing URL #53:
+[2026-04-30T12:47:16Z] https://www.tiktok.com/@eden.gross/video/7291490928366226730
+[TikTok] Extracting URL: https://www.tiktok.com/@eden.gross/video/7291490928366226730
+[TikTok] 7291490928366226730: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7291490928366226730: Downloading 1 format(s): bytevc1_1080p_851237-1
+[download] Destination: tmp_downloads/eden.gross/@eden.gross_2023-10-19_the only way to do it😤_7291490928366226730.mp4
+[download]   0.1% of    1.15MiB at  Unknown B/s ETA Unknown[download]   0.3% of    1.15MiB at  Unknown B/s ETA Unknown[download]   0.6% of    1.15MiB at    6.77MiB/s ETA 00:00  [download]   1.3% of    1.15MiB at   11.00MiB/s ETA 00:00[download]   2.6% of    1.15MiB at   15.15MiB/s ETA 00:00[download]   5.4% of    1.15MiB at    3.76MiB/s ETA 00:00[download]  10.8% of    1.15MiB at    5.44MiB/s ETA 00:00[download]  21.7% of    1.15MiB at    5.84MiB/s ETA 00:00[download]  43.6% of    1.15MiB at    7.04MiB/s ETA 00:00[download]  87.2% of    1.15MiB at    9.73MiB/s ETA 00:00[download] 100.0% of    1.15MiB at   10.75MiB/s ETA 00:00[download] 100% of    1.15MiB in 00:00:00 at 3.13MiB/s   
+[2026-04-30T12:47:18Z] New file downloaded for this URL.
+[2026-04-30T12:47:18Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:47:18Z] Copying downloaded files to downloads
+[2026-04-30T12:47:18Z] Processing URL #54:
+[2026-04-30T12:47:18Z] https://www.tiktok.com/@eden.gross/video/7293265016227155231
+[TikTok] Extracting URL: https://www.tiktok.com/@eden.gross/video/7293265016227155231
+[TikTok] 7293265016227155231: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7293265016227155231: Downloading 1 format(s): bytevc1_1080p_1443603-1
+[download] Destination: tmp_downloads/eden.gross/@eden.gross_2023-10-23_TikTok video #7293265016227155231_7293265016227155231.mp4
+[download]   0.1% of    1.03MiB at   81.42KiB/s ETA 00:12[download]   0.3% of    1.03MiB at  235.56KiB/s ETA 00:04[download]   0.7% of    1.03MiB at  536.94KiB/s ETA 00:01[download]   1.4% of    1.03MiB at    1.10MiB/s ETA 00:00[download]   2.9% of    1.03MiB at    2.13MiB/s ETA 00:00[download]   6.0% of    1.03MiB at    2.43MiB/s ETA 00:00[download]  12.1% of    1.03MiB at    2.56MiB/s ETA 00:00[download]  24.3% of    1.03MiB at    3.59MiB/s ETA 00:00[download]  48.6% of    1.03MiB at    4.99MiB/s ETA 00:00[download]  97.3% of    1.03MiB at    7.53MiB/s ETA 00:00[download] 100.0% of    1.03MiB at    7.70MiB/s ETA 00:00[download] 100% of    1.03MiB in 00:00:00 at 2.27MiB/s   
+[2026-04-30T12:47:20Z] New file downloaded for this URL.
+[2026-04-30T12:47:20Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:47:20Z] Copying downloaded files to downloads
+[2026-04-30T12:47:20Z] Processing URL #55:
+[2026-04-30T12:47:20Z] https://www.tiktok.com/@eden.gross/video/7294437487936654623
+[TikTok] Extracting URL: https://www.tiktok.com/@eden.gross/video/7294437487936654623
+[TikTok] 7294437487936654623: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7294437487936654623: Downloading 1 format(s): bytevc1_1080p_896997-1
+[download] Destination: tmp_downloads/eden.gross/@eden.gross_2023-10-27_TikTok video #7294437487936654623_7294437487936654623.mp4
+[download]   0.1% of  953.39KiB at  Unknown B/s ETA Unknown[download]   0.3% of  953.39KiB at  Unknown B/s ETA Unknown[download]   0.7% of  953.39KiB at  Unknown B/s ETA 00:00  [download]   1.6% of  953.39KiB at   11.61MiB/s ETA 00:00[download]   3.3% of  953.39KiB at   16.32MiB/s ETA 00:00[download]   6.6% of  953.39KiB at    2.74MiB/s ETA 00:00[download]  13.3% of  953.39KiB at    2.77MiB/s ETA 00:00[download]  26.7% of  953.39KiB at    3.68MiB/s ETA 00:00[download]  53.6% of  953.39KiB at    5.13MiB/s ETA 00:00[download] 100.0% of  953.39KiB at    7.44MiB/s ETA 00:00[download] 100% of  953.39KiB in 00:00:00 at 2.04MiB/s   
+[2026-04-30T12:47:21Z] New file downloaded for this URL.
+[2026-04-30T12:47:21Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:47:22Z] Copying downloaded files to downloads
+[2026-04-30T12:47:22Z] Preparing commit for: batch-11-after-55-successful-downloads
+[2026-04-30T12:47:22Z] Removing video files larger than 90MB from: downloads
