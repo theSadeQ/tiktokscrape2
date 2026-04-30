@@ -26,6 +26,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -38,7 +39,7 @@ jobs:
           echo "yt-dlp version:"
           yt-dlp --version
 
-      - name: Extract URLs and download TikTok files
+      - name: Extract URLs, download, batch commit, and push tolerantly
         shell: bash
         env:
           # Optional secret.
@@ -48,14 +49,45 @@ jobs:
           # It should contain base64-encoded cookies.txt content.
           TIKTOK_COOKIES_B64: ${{ secrets.TIKTOK_COOKIES_B64 }}
         run: |
-          set -u
+          # Important:
+          # We intentionally do NOT use `set -e`.
+          # Why?
+          # In tolerant mode, failed downloads, commits, or pushes should be logged,
+          # not immediately kill the whole workflow step.
+          set +e
+          set +u
           set -o pipefail
 
-          mkdir -p downloads tmp_downloads
+          BRANCH="${GITHUB_REF_NAME:-${GITHUB_REF##*/}}"
+
+          BATCH_SIZE=5
+          MAX_FILE_SIZE_BYTES=$((90 * 1024 * 1024))
+
+          DOWNLOAD_DIR="downloads"
+          TMP_DIR="tmp_downloads"
+          REPORT_DIR="reports"
+
+          FAILED_URLS_FILE="$REPORT_DIR/failed_urls.txt"
+          FAILED_COMMITS_FILE="$REPORT_DIR/failed_commits.txt"
+          DEBUG_LOG="$REPORT_DIR/debug.log"
+
+          mkdir -p "$DOWNLOAD_DIR" "$TMP_DIR" "$REPORT_DIR"
           touch downloaded_archive.txt
+          touch "$FAILED_URLS_FILE" "$FAILED_COMMITS_FILE" "$DEBUG_LOG"
+
+          log() {
+            echo "[$(date -u +"%Y-%m-%dT%H:%M:%SZ")] $*" | tee -a "$DEBUG_LOG"
+          }
+
+          log "Workflow started"
+          log "Current branch: $BRANCH"
+          log "Batch size: $BATCH_SIZE"
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
 
           MSG_FILE="$(mktemp)"
-          git log -1 --pretty=%B > "$MSG_FILE"
+          git log -1 --pretty=%B > "$MSG_FILE" 2>>"$DEBUG_LOG"
 
           echo "===== Commit message ====="
           cat "$MSG_FILE"
@@ -68,33 +100,32 @@ jobs:
           )"
 
           if [ -z "$COMMAND" ]; then
-            echo "No supported download command found."
-            echo ""
-            echo "Use one of:"
-            echo "  tiktok-download:"
-            echo "  tiktok-zip:"
-            echo "  download:"
-            echo "  download-zip:"
-            exit 1
+            log "No supported download command found."
+            log "Use one of:"
+            log "  tiktok-download:"
+            log "  tiktok-zip:"
+            log "  download:"
+            log "  download-zip:"
+            exit 0
           fi
 
           case "$COMMAND" in
             tiktok-zip|download-zip)
               MODE="normal"
-              echo "Note: ZIP mode no longer creates split archives."
-              echo "Files larger than 90MB will be ignored instead."
+              log "Note: ZIP mode no longer creates split archives."
+              log "Files larger than 90MB will be ignored instead."
               ;;
             tiktok-download|download)
               MODE="normal"
               ;;
             *)
-              echo "Unsupported command: $COMMAND"
-              exit 1
+              log "Unsupported command: $COMMAND"
+              exit 0
               ;;
           esac
 
-          echo "Detected command: $COMMAND"
-          echo "Download mode: $MODE"
+          log "Detected command: $COMMAND"
+          log "Download mode: $MODE"
 
           URLS="$(
             awk '
@@ -118,13 +149,12 @@ jobs:
           )"
 
           if [ -z "$URLS" ]; then
-            echo "No URLs found after '$COMMAND:'."
-            echo ""
-            echo "Correct example:"
-            echo "tiktok-download:"
-            echo "https://www.tiktok.com/@user/video/123"
-            echo "https://www.tiktok.com/@user/video/456"
-            exit 1
+            log "No URLs found after '$COMMAND:'."
+            log "Correct example:"
+            log "tiktok-download:"
+            log "https://www.tiktok.com/@user/video/123"
+            log "https://www.tiktok.com/@user/video/456"
+            exit 0
           fi
 
           echo "===== URLs to download ====="
@@ -133,37 +163,105 @@ jobs:
 
           COOKIES_ARGS=()
           if [ -n "${TIKTOK_COOKIES_B64:-}" ]; then
-            echo "Using TikTok cookies from TIKTOK_COOKIES_B64 secret."
-            echo "$TIKTOK_COOKIES_B64" | base64 -d > cookies.txt
+            log "Using TikTok cookies from TIKTOK_COOKIES_B64 secret."
+            echo "$TIKTOK_COOKIES_B64" | base64 -d > cookies.txt 2>>"$DEBUG_LOG"
             chmod 600 cookies.txt
             COOKIES_ARGS=(--cookies cookies.txt)
           else
-            echo "No TikTok cookies secret provided. Trying public download."
+            log "No TikTok cookies secret provided. Trying public download."
           fi
 
-          count_files() {
-            find tmp_downloads -type f | wc -l
+          count_tmp_files() {
+            find "$TMP_DIR" -type f 2>>"$DEBUG_LOG" | wc -l
           }
 
-          YTDLP_HAS_ERRORS=0
+          remove_oversized_videos() {
+            target_dir="$1"
+
+            if [ ! -d "$target_dir" ]; then
+              return 0
+            fi
+
+            log "Removing video files larger than 90MB from: $target_dir"
+
+            find "$target_dir" -type f \( \
+              -iname "*.mp4" -o \
+              -iname "*.mov" -o \
+              -iname "*.mkv" -o \
+              -iname "*.webm" \
+            \) -size +90M -print0 2>>"$DEBUG_LOG" | while IFS= read -r -d '' file; do
+              size_bytes="$(stat -c%s "$file" 2>>"$DEBUG_LOG")"
+              log "Removing oversized video: $file (${size_bytes:-unknown} bytes)"
+              echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | Oversized file removed | $file | ${size_bytes:-unknown} bytes" >> "$FAILED_URLS_FILE"
+              rm -f -- "$file" 2>>"$DEBUG_LOG"
+            done
+
+            return 0
+          }
+
+          commit_and_push_batch() {
+            batch_label="$1"
+
+            log "Preparing commit for: $batch_label"
+
+            remove_oversized_videos "$DOWNLOAD_DIR"
+
+            git add "$DOWNLOAD_DIR" downloaded_archive.txt "$REPORT_DIR" >>"$DEBUG_LOG" 2>&1
+            ADD_EXIT=$?
+
+            if [ "$ADD_EXIT" -ne 0 ]; then
+              log "git add failed for $batch_label"
+              echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | git add failed | $batch_label" >> "$FAILED_COMMITS_FILE"
+              return 0
+            fi
+
+            git diff --cached --quiet >>"$DEBUG_LOG" 2>&1
+            DIFF_EXIT=$?
+
+            if [ "$DIFF_EXIT" -eq 0 ]; then
+              log "Nothing to commit for $batch_label"
+              return 0
+            fi
+
+            git commit -m "Add downloaded TikTok files $batch_label [skip ci]" >>"$DEBUG_LOG" 2>&1
+            COMMIT_EXIT=$?
+
+            if [ "$COMMIT_EXIT" -ne 0 ]; then
+              log "git commit failed for $batch_label"
+              echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | git commit failed | $batch_label" >> "$FAILED_COMMITS_FILE"
+              return 0
+            fi
+
+            git push origin HEAD:"$BRANCH" >>"$DEBUG_LOG" 2>&1
+            PUSH_EXIT=$?
+
+            if [ "$PUSH_EXIT" -ne 0 ]; then
+              log "git push failed for $batch_label"
+              echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | git push failed | $batch_label" >> "$FAILED_COMMITS_FILE"
+              return 0
+            fi
+
+            log "Batch committed and pushed successfully: $batch_label"
+            return 0
+          }
+
+          PROCESSED_URLS=0
           SUCCESSFUL_URLS=0
+          FAILED_URLS=0
+          BATCH_NUMBER=1
 
           while IFS= read -r URL; do
             [ -z "$URL" ] && continue
 
+            PROCESSED_URLS=$((PROCESSED_URLS + 1))
+
             echo ""
-            echo "Downloading:"
-            echo "$URL"
+            log "Processing URL #$PROCESSED_URLS:"
+            log "$URL"
 
-            BEFORE_COUNT="$(count_files)"
+            BEFORE_COUNT="$(count_tmp_files)"
 
-            # We use --max-filesize 90M so yt-dlp skips videos that it knows
-            # are larger than 90MB before downloading them.
-            #
-            # Why still clean up later?
-            # Some sites do not always expose file size before download,
-            # so a second safety check removes oversized files after download.
-            if yt-dlp \
+            yt-dlp \
               --ignore-errors \
               --no-abort-on-error \
               --no-mtime \
@@ -172,115 +270,67 @@ jobs:
               --format "bv*+ba/b" \
               --merge-output-format mp4 \
               "${COOKIES_ARGS[@]}" \
-              --paths "tmp_downloads" \
-              -o "%(uploader|unknown_uploader)s/@%(uploader|unknown_uploader)s_%(upload_date>%Y-%m-%d|unknown_date)s_%(title).80B_%(id)s.%(ext)s"
-              "$URL"; then
+              --paths "$TMP_DIR" \
+              -o "%(uploader|unknown_uploader)s/@%(uploader|unknown_uploader)s_%(upload_date>%Y-%m-%d|unknown_date)s_%(title).80B_%(id)s.%(ext)s" \
+              "$URL" >>"$DEBUG_LOG" 2>&1
 
-              EXIT_CODE=0
-            else
-              EXIT_CODE=$?
-            fi
+            YTDLP_EXIT=$?
 
-            AFTER_COUNT="$(count_files)"
+            AFTER_COUNT="$(count_tmp_files)"
 
-            if [ "$EXIT_CODE" -ne 0 ]; then
-              echo "yt-dlp returned exit code $EXIT_CODE for:"
-              echo "$URL"
-              YTDLP_HAS_ERRORS=1
+            if [ "$YTDLP_EXIT" -ne 0 ]; then
+              log "yt-dlp returned exit code $YTDLP_EXIT for URL:"
+              log "$URL"
             fi
 
             if [ "$AFTER_COUNT" -gt "$BEFORE_COUNT" ]; then
-              echo "New file downloaded for this URL."
-              SUCCESSFUL_URLS=$((SUCCESSFUL_URLS + 1))
+              log "New file downloaded for this URL."
+
+              remove_oversized_videos "$TMP_DIR"
+
+              TMP_FILES_AFTER_CLEANUP="$(count_tmp_files)"
+
+              if [ "$TMP_FILES_AFTER_CLEANUP" -gt "$BEFORE_COUNT" ]; then
+                log "Copying downloaded files to $DOWNLOAD_DIR"
+                cp -a "$TMP_DIR"/. "$DOWNLOAD_DIR"/ >>"$DEBUG_LOG" 2>&1
+
+                SUCCESSFUL_URLS=$((SUCCESSFUL_URLS + 1))
+
+                if [ "$SUCCESSFUL_URLS" -gt 0 ] && [ $((SUCCESSFUL_URLS % BATCH_SIZE)) -eq 0 ]; then
+                  commit_and_push_batch "batch-$BATCH_NUMBER-after-$SUCCESSFUL_URLS-successful-downloads"
+                  BATCH_NUMBER=$((BATCH_NUMBER + 1))
+                fi
+              else
+                log "Downloaded file was removed during size cleanup."
+                FAILED_URLS=$((FAILED_URLS + 1))
+                echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | Removed by size cleanup | $URL" >> "$FAILED_URLS_FILE"
+              fi
             else
-              echo "No new file appeared for this URL."
-              echo "Possible reasons:"
-              echo "  1. It was already downloaded and listed in downloaded_archive.txt"
-              echo "  2. TikTok blocked public access"
-              echo "  3. The URL is invalid or unavailable"
-              echo "  4. Cookies are required"
-              echo "  5. The video is larger than 90MB and was skipped"
+              log "No new file appeared for this URL."
+              log "Possible reasons:"
+              log "  1. It was already downloaded and listed in downloaded_archive.txt"
+              log "  2. TikTok blocked public access"
+              log "  3. The URL is invalid or unavailable"
+              log "  4. Cookies are required"
+              log "  5. The video is larger than 90MB and was skipped"
+
+              FAILED_URLS=$((FAILED_URLS + 1))
+              echo "$(date -u +"%Y-%m-%dT%H:%M:%SZ") | No new file or failed download | $URL" >> "$FAILED_URLS_FILE"
             fi
           done <<< "$URLS"
 
-          TOTAL_FILES="$(count_files)"
-          echo ""
-          echo "Total files currently in tmp_downloads before size cleanup: $TOTAL_FILES"
+          log "Running final commit for remaining files/reports."
+          commit_and_push_batch "final"
 
-          if [ "$TOTAL_FILES" -eq 0 ]; then
-            if [ "$YTDLP_HAS_ERRORS" -eq 1 ]; then
-              echo "No files were downloaded and at least one yt-dlp error occurred."
-              exit 1
-            fi
+          log "Summary:"
+          log "Processed URLs: $PROCESSED_URLS"
+          log "Successful URLs: $SUCCESSFUL_URLS"
+          log "Failed/no-new-file URLs: $FAILED_URLS"
+          log "Workflow completed in tolerant mode."
 
-            echo "No new files downloaded. They may already be archived or larger than 90MB."
-            exit 0
-          fi
-
-          echo ""
-          echo "Removing downloaded video files larger than 90MB..."
-
-          find tmp_downloads -type f \( \
-            -iname "*.mp4" -o \
-            -iname "*.mov" -o \
-            -iname "*.mkv" -o \
-            -iname "*.webm" \
-          \) -size +90M -print0 | while IFS= read -r -d '' file; do
-            size_bytes="$(stat -c%s "$file")"
-            echo "Ignoring oversized video: $file (${size_bytes} bytes)"
-            rm -f -- "$file"
-          done
-
-          TOTAL_FILES_AFTER_CLEANUP="$(count_files)"
-          echo ""
-          echo "Total files currently in tmp_downloads after size cleanup: $TOTAL_FILES_AFTER_CLEANUP"
-
-          if [ "$TOTAL_FILES_AFTER_CLEANUP" -eq 0 ]; then
-            echo "All downloaded files were larger than 90MB, so nothing will be committed."
-            exit 0
-          fi
-
-          echo "Copying downloaded files to downloads/..."
-          cp -a tmp_downloads/. downloads/
-
-          rm -rf tmp_downloads
-
-          if [ "$YTDLP_HAS_ERRORS" -eq 1 ]; then
-            echo "Some URLs had errors, but at least one valid file was downloaded."
-            echo "Continuing so successful downloads can be committed."
-          fi
-
-      - name: Commit & Push changes
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          BRANCH="${GITHUB_REF_NAME}"
-
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          echo "Final safety check: removing videos larger than 90MB from downloads/ before commit..."
-
-          if [ -d downloads ]; then
-            find downloads -type f \( \
-              -iname "*.mp4" -o \
-              -iname "*.mov" -o \
-              -iname "*.mkv" -o \
-              -iname "*.webm" \
-            \) -size +90M -print0 | while IFS= read -r -d '' file; do
-              size_bytes="$(stat -c%s "$file")"
-              echo "Removing oversized video before commit: $file (${size_bytes} bytes)"
-              rm -f -- "$file"
-            done
-          fi
-
-          git add downloads/ downloaded_archive.txt
-
-          if git diff --cached --quiet; then
-            echo "Nothing to commit."
-            exit 0
-          fi
-
-          git commit -m "Add downloaded TikTok files [skip ci]"
-          git push origin HEAD:"$BRANCH"
+          # Always exit 0 because this is tolerant mode.
+          # Failures are written to:
+          #   reports/failed_urls.txt
+          #   reports/failed_commits.txt
+          #   reports/debug.log
+          exit 0
