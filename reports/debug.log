@@ -5664,3 +5664,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-04-30T12:55:16Z] Copying downloaded files to downloads
 [2026-04-30T12:55:17Z] Preparing commit for: batch-48-after-240-successful-downloads
 [2026-04-30T12:55:17Z] Removing video files larger than 90MB from: downloads
+[main 85cd96c] Add downloaded TikTok files batch-48-after-240-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/iamoliviaponton/@iamoliviaponton_2022-01-31_i love me my smoothies_7059485675585965358.mp4
+ create mode 100644 downloads/iamoliviaponton/@iamoliviaponton_2022-02-01_happens too often_7059858072373841199.mp4
+ create mode 100644 downloads/iamoliviaponton/@iamoliviaponton_2022-03-10_just out here trying to love myself_7073619754753428782.mp4
+ create mode 100644 downloads/iamoliviaponton/@iamoliviaponton_2022-03-11_your a jerk_7073935322308005163.mp4
+ create mode 100644 downloads/iamoliviaponton/@iamoliviaponton_2022-03-15_TikTok video #7075387477850082606_7075387477850082606.mp4
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   c45be7b..85cd96c  HEAD -> main
+[2026-04-30T12:55:22Z] Batch committed and pushed successfully: batch-48-after-240-successful-downloads
+[2026-04-30T12:55:22Z] Processing URL #241:
+[2026-04-30T12:55:22Z] https://www.tiktok.com/@iamoliviaponton/video/7076576849144417579
+[TikTok] Extracting URL: https://www.tiktok.com/@iamoliviaponton/video/7076576849144417579
+[TikTok] 7076576849144417579: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7076576849144417579: Downloading 1 format(s): bytevc1_540p_483877-1
+[download] Destination: tmp_downloads/iamoliviaponton/@iamoliviaponton_2022-03-18_TikTok video #7076576849144417579_7076576849144417579.mp4
+[download]   0.2% of  414.06KiB at  Unknown B/s ETA Unknown[download]   0.7% of  414.06KiB at  Unknown B/s ETA Unknown[download]   1.7% of  414.06KiB at  Unknown B/s ETA Unknown[download]   3.6% of  414.06KiB at   12.06MiB/s ETA 00:00  [download]   7.5% of  414.06KiB at   16.04MiB/s ETA 00:00[download]  15.2% of  414.06KiB at    3.72MiB/s ETA 00:00[download]  30.7% of  414.06KiB at    5.44MiB/s ETA 00:00[download]  61.6% of  414.06KiB at    5.79MiB/s ETA 00:00[download] 100.0% of  414.06KiB at    6.75MiB/s ETA 00:00[download] 100% of  414.06KiB in 00:00:00 at 1.68MiB/s   
+[2026-04-30T12:55:23Z] New file downloaded for this URL.
+[2026-04-30T12:55:23Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:55:23Z] Copying downloaded files to downloads
+[2026-04-30T12:55:24Z] Processing URL #242:
+[2026-04-30T12:55:24Z] https://www.tiktok.com/@iamoliviaponton/video/7076614201652825386
+[TikTok] Extracting URL: https://www.tiktok.com/@iamoliviaponton/video/7076614201652825386
+[TikTok] 7076614201652825386: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7076614201652825386: Downloading 1 format(s): bytevc1_540p_550507-1
+[download] Destination: tmp_downloads/iamoliviaponton/@iamoliviaponton_2022-03-19_me 24⧸7_7076614201652825386.mp4
+[download]   0.1% of  683.30KiB at  Unknown B/s ETA Unknown[download]   0.4% of  683.30KiB at  Unknown B/s ETA Unknown[download]   1.0% of  683.30KiB at  Unknown B/s ETA Unknown[download]   2.2% of  683.30KiB at   11.42MiB/s ETA 00:00  [download]   4.5% of  683.30KiB at   15.04MiB/s ETA 00:00[download]   9.2% of  683.30KiB at    3.71MiB/s ETA 00:00[download]  18.6% of  683.30KiB at    5.44MiB/s ETA 00:00[download]  37.3% of  683.30KiB at    5.76MiB/s ETA 00:00[download]  74.8% of  683.30KiB at    6.98MiB/s ETA 00:00[download] 100.0% of  683.30KiB at    7.93MiB/s ETA 00:00[download] 100% of  683.30KiB in 00:00:00 at 2.50MiB/s   
+[2026-04-30T12:55:26Z] New file downloaded for this URL.
+[2026-04-30T12:55:26Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:55:26Z] Copying downloaded files to downloads
+[2026-04-30T12:55:26Z] Processing URL #243:
+[2026-04-30T12:55:26Z] https://www.tiktok.com/@iamoliviaponton/video/7081437626674220331
+[TikTok] Extracting URL: https://www.tiktok.com/@iamoliviaponton/video/7081437626674220331
+[TikTok] 7081437626674220331: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7081437626674220331: Downloading 1 format(s): bytevc1_540p_583655-1
+[download] Destination: tmp_downloads/iamoliviaponton/@iamoliviaponton_2022-04-01_@rubysnowber_7081437626674220331.mp4
+[download]   0.0% of    3.55MiB at  Unknown B/s ETA Unknown[download]   0.1% of    3.55MiB at  Unknown B/s ETA Unknown[download]   0.2% of    3.55MiB at    6.61MiB/s ETA 00:00  [download]   0.4% of    3.55MiB at   11.39MiB/s ETA 00:00[download]   0.9% of    3.55MiB at   16.25MiB/s ETA 00:00[download]   1.7% of    3.55MiB at    3.53MiB/s ETA 00:00[download]   3.5% of    3.55MiB at    3.77MiB/s ETA 00:00[download]   7.0% of    3.55MiB at    4.98MiB/s ETA 00:00[download]  14.1% of    3.55MiB at    6.98MiB/s ETA 00:00[download]  28.1% of    3.55MiB at    9.60MiB/s ETA 00:00[download]  56.3% of    3.55MiB at   14.67MiB/s ETA 00:00[download] 100.0% of    3.55MiB at   21.22MiB/s ETA 00:00[download] 100% of    3.55MiB in 00:00:00 at 10.17MiB/s  
+[2026-04-30T12:55:28Z] New file downloaded for this URL.
+[2026-04-30T12:55:28Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:55:28Z] Copying downloaded files to downloads
+[2026-04-30T12:55:29Z] Processing URL #244:
+[2026-04-30T12:55:29Z] https://www.tiktok.com/@iamoliviaponton/video/7086593369060691242
+[TikTok] Extracting URL: https://www.tiktok.com/@iamoliviaponton/video/7086593369060691242
+[TikTok] 7086593369060691242: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7086593369060691242: Downloading 1 format(s): bytevc1_540p_377062-1
+[download] Destination: tmp_downloads/iamoliviaponton/@iamoliviaponton_2022-04-14_fake tan queens @Olivia Dunne_7086593369060691242.mp4
+[download]   0.3% of  342.96KiB at  Unknown B/s ETA Unknown[download]   0.9% of  342.96KiB at  Unknown B/s ETA Unknown[download]   2.0% of  342.96KiB at  Unknown B/s ETA Unknown[download]   4.4% of  342.96KiB at   12.12MiB/s ETA 00:00  [download]   9.0% of  342.96KiB at    8.91MiB/s ETA 00:00[download]  18.4% of  342.96KiB at    3.73MiB/s ETA 00:00[download]  37.0% of  342.96KiB at    3.71MiB/s ETA 00:00[download]  74.4% of  342.96KiB at    4.94MiB/s ETA 00:00[download] 100.0% of  342.96KiB at    5.73MiB/s ETA 00:00[download] 100% of  342.96KiB in 00:00:00 at 1.60MiB/s   
+[2026-04-30T12:55:30Z] New file downloaded for this URL.
+[2026-04-30T12:55:30Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:55:30Z] Copying downloaded files to downloads
+[2026-04-30T12:55:31Z] Processing URL #245:
+[2026-04-30T12:55:31Z] https://www.tiktok.com/@iamoliviaponton/video/7104773664872123690
+[TikTok] Extracting URL: https://www.tiktok.com/@iamoliviaponton/video/7104773664872123690
+[TikTok] 7104773664872123690: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7104773664872123690: Downloading 1 format(s): bytevc1_720p_1484403-1
+[download] Destination: tmp_downloads/iamoliviaponton/@iamoliviaponton_2022-06-02_#ColorCustomizer @beccameans_7104773664872123690.mp4
+[download]   0.1% of    1.62MiB at  Unknown B/s ETA Unknown[download]   0.2% of    1.62MiB at  Unknown B/s ETA Unknown[download]   0.4% of    1.62MiB at  Unknown B/s ETA 00:00  [download]   0.9% of    1.62MiB at   11.20MiB/s ETA 00:00[download]   1.9% of    1.62MiB at   16.29MiB/s ETA 00:00[download]   3.8% of    1.62MiB at    3.79MiB/s ETA 00:00[download]   7.6% of    1.62MiB at    5.48MiB/s ETA 00:00[download]  15.3% of    1.62MiB at    5.85MiB/s ETA 00:00[download]  30.8% of    1.62MiB at    7.02MiB/s ETA 00:00[download]  61.6% of    1.62MiB at    9.60MiB/s ETA 00:00[download] 100.0% of    1.62MiB at   12.94MiB/s ETA 00:00[download] 100% of    1.62MiB in 00:00:00 at 4.28MiB/s   
+[2026-04-30T12:55:32Z] New file downloaded for this URL.
+[2026-04-30T12:55:32Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T12:55:32Z] Copying downloaded files to downloads
+[2026-04-30T12:55:33Z] Preparing commit for: batch-49-after-245-successful-downloads
+[2026-04-30T12:55:33Z] Removing video files larger than 90MB from: downloads
