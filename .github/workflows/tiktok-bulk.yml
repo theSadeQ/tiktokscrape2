@@ -173,7 +173,7 @@ jobs:
               --merge-output-format mp4 \
               "${COOKIES_ARGS[@]}" \
               --paths "tmp_downloads" \
-              -o "%(uploader|unknown_uploader)s/%(upload_date>%Y-%m-%d|unknown_date)s_%(title).80B_%(id)s.%(ext)s" \
+              -o "%(uploader|unknown_uploader)s/@%(uploader|unknown_uploader)s_%(upload_date>%Y-%m-%d|unknown_date)s_%(title).80B_%(id)s.%(ext)s"
               "$URL"; then
 
               EXIT_CODE=0
