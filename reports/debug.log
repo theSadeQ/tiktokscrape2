@@ -1586,3 +1586,73 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-04-30T11:52:54Z] Copying downloaded files to downloads
 [2026-04-30T11:53:00Z] Preparing commit for: batch-22-after-110-successful-downloads
 [2026-04-30T11:53:00Z] Removing video files larger than 90MB from: downloads
+[main 9a5cf2e] Add downloaded TikTok files batch-22-after-110-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/iggybellyy/@iggybellyy_2026-03-05_my soulmate _7613567779244870943.mp4
+ create mode 100644 downloads/iggybellyy/@iggybellyy_2026-03-06_#grwm #friyay #iggyfied _7614178998981086477.mp4
+ create mode 100644 "downloads/iggybellyy/@iggybellyy_2026-03-06_i\342\200\231m the whole loaf #iggyfied #nailart #monkeynails _7614243816261946637.mp4"
+ create mode 100644 "downloads/iggybellyy/@iggybellyy_2026-03-06_like ARE YOU KIDDING ME \360\237\230\253\360\237\230\253 they r so cute @nailzbysxfia #iggyfied #na..._7614243192296197389.mp4"
+ create mode 100644 downloads/iggybellyy/@iggybellyy_2026-03-07_lol #eatwithme #muckbang #iggyfied #tastetest #thoughtsandexpressions _7614353559986916621.mp4
+remote: warning: See https://gh.io/lfs for more information.        
+remote: warning: File downloads/iggybellyy/@iggybellyy_2026-03-07_lol #eatwithme #muckbang #iggyfied #tastetest #thoughtsandexpressions _7614353559986916621.mp4 is 50.24 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB        
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   9ba8bd2..9a5cf2e  HEAD -> main
+[2026-04-30T11:53:15Z] Batch committed and pushed successfully: batch-22-after-110-successful-downloads
+[2026-04-30T11:53:15Z] Processing URL #115:
+[2026-04-30T11:53:15Z] https://www.tiktok.com/@iggybellyy/video/7614919930676284685
+[TikTok] Extracting URL: https://www.tiktok.com/@iggybellyy/video/7614919930676284685
+[TikTok] 7614919930676284685: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7614919930676284685: Downloading 1 format(s): bytevc1_1080p_1730052-1
+[download] Destination: tmp_downloads/iggybellyy/@iggybellyy_2026-03-08_#grwm #iggyfied #sundayfunday _7614919930676284685.mp4
+[download]   0.0% of   19.68MiB at  Unknown B/s ETA Unknown[download]   0.0% of   19.68MiB at  Unknown B/s ETA Unknown[download]   0.0% of   19.68MiB at  Unknown B/s ETA Unknown[download]   0.1% of   19.68MiB at   11.95MiB/s ETA 00:01  [download]   0.2% of   19.68MiB at   19.12MiB/s ETA 00:01[download]   0.3% of   19.68MiB at   31.55MiB/s ETA 00:00[download]   0.6% of   19.68MiB at   37.55MiB/s ETA 00:00[download]   1.3% of   19.68MiB at   57.89MiB/s ETA 00:00[download]   2.5% of   19.68MiB at   78.50MiB/s ETA 00:00[download]   5.1% of   19.68MiB at   80.68MiB/s ETA 00:00[download]  10.2% of   19.68MiB at   77.43MiB/s ETA 00:00[download]  20.3% of   19.68MiB at   80.00MiB/s ETA 00:00[download]  40.6% of   19.68MiB at   78.42MiB/s ETA 00:00[download]  61.0% of   19.68MiB at   78.66MiB/s ETA 00:00[download]  81.3% of   19.68MiB at   79.08MiB/s ETA 00:00[download] 100.0% of   19.68MiB at   78.90MiB/s ETA 00:00[download] 100% of   19.68MiB in 00:00:00 at 52.80MiB/s  
+[2026-04-30T11:53:17Z] New file downloaded for this URL.
+[2026-04-30T11:53:17Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T11:53:17Z] Copying downloaded files to downloads
+[2026-04-30T11:53:23Z] Processing URL #116:
+[2026-04-30T11:53:23Z] https://www.tiktok.com/@iggybellyy/video/7615071960007052557
+[TikTok] Extracting URL: https://www.tiktok.com/@iggybellyy/video/7615071960007052557
+[TikTok] 7615071960007052557: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7615071960007052557: Downloading 1 format(s): bytevc1_1080p_1169208-1
+[download] Destination: tmp_downloads/iggybellyy/@iggybellyy_2026-03-09_bring back yearning _7615071960007052557.mp4
+[download]   0.1% of  923.01KiB at  Unknown B/s ETA Unknown[download]   0.3% of  923.01KiB at  Unknown B/s ETA Unknown[download]   0.8% of  923.01KiB at    5.77MiB/s ETA 00:00  [download]   1.6% of  923.01KiB at    9.58MiB/s ETA 00:00[download]   3.4% of  923.01KiB at   16.13MiB/s ETA 00:00[download]   6.8% of  923.01KiB at   27.08MiB/s ETA 00:00[download]  13.8% of  923.01KiB at   37.49MiB/s ETA 00:00[download]  27.6% of  923.01KiB at   53.48MiB/s ETA 00:00[download]  55.4% of  923.01KiB at   55.64MiB/s ETA 00:00[download] 100.0% of  923.01KiB at   53.46MiB/s ETA 00:00[download] 100% of  923.01KiB in 00:00:00 at 9.44MiB/s   
+[2026-04-30T11:53:24Z] New file downloaded for this URL.
+[2026-04-30T11:53:24Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T11:53:24Z] Copying downloaded files to downloads
+[2026-04-30T11:53:30Z] Processing URL #117:
+[2026-04-30T11:53:30Z] https://www.tiktok.com/@iggybellyy/video/7615072405538491662
+[TikTok] Extracting URL: https://www.tiktok.com/@iggybellyy/video/7615072405538491662
+[TikTok] 7615072405538491662: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7615072405538491662: Downloading 1 format(s): bytevc1_1080p_1139481-1
+[download] Destination: tmp_downloads/iggybellyy/@iggybellyy_2026-03-09_#wait _7615072405538491662.mp4
+[download]   0.1% of    1.45MiB at  Unknown B/s ETA Unknown[download]   0.2% of    1.45MiB at  Unknown B/s ETA Unknown[download]   0.5% of    1.45MiB at  Unknown B/s ETA Unknown[download]   1.0% of    1.45MiB at   12.02MiB/s ETA 00:00  [download]   2.1% of    1.45MiB at   19.39MiB/s ETA 00:00[download]   4.2% of    1.45MiB at   31.92MiB/s ETA 00:00[download]   8.5% of    1.45MiB at   41.66MiB/s ETA 00:00[download]  17.1% of    1.45MiB at   49.34MiB/s ETA 00:00[download]  34.3% of    1.45MiB at   50.58MiB/s ETA 00:00[download]  68.7% of    1.45MiB at   50.12MiB/s ETA 00:00[download] 100.0% of    1.45MiB at   48.51MiB/s ETA 00:00[download] 100% of    1.45MiB in 00:00:00 at 7.29MiB/s   
+[2026-04-30T11:53:31Z] New file downloaded for this URL.
+[2026-04-30T11:53:31Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T11:53:31Z] Copying downloaded files to downloads
+[2026-04-30T11:53:38Z] Processing URL #118:
+[2026-04-30T11:53:38Z] https://www.tiktok.com/@iggybellyy/video/7615072535486532877
+[TikTok] Extracting URL: https://www.tiktok.com/@iggybellyy/video/7615072535486532877
+[TikTok] 7615072535486532877: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7615072535486532877: Downloading 1 format(s): bytevc1_1080p_1304381-1
+[download] Destination: tmp_downloads/iggybellyy/@iggybellyy_2026-03-09_nobody knows me _7615072535486532877.mp4
+[download]   0.0% of    2.33MiB at  Unknown B/s ETA Unknown[download]   0.1% of    2.33MiB at  Unknown B/s ETA Unknown[download]   0.3% of    2.33MiB at  Unknown B/s ETA Unknown[download]   0.6% of    2.33MiB at   12.77MiB/s ETA 00:00  [download]   1.3% of    2.33MiB at   20.76MiB/s ETA 00:00[download]   2.6% of    2.33MiB at   34.34MiB/s ETA 00:00[download]   5.3% of    2.33MiB at   36.87MiB/s ETA 00:00[download]  10.7% of    2.33MiB at   60.98MiB/s ETA 00:00[download]  21.4% of    2.33MiB at   76.32MiB/s ETA 00:00[download]  42.8% of    2.33MiB at  106.42MiB/s ETA 00:00[download]  85.7% of    2.33MiB at  152.22MiB/s ETA 00:00[download] 100.0% of    2.33MiB at  168.09MiB/s ETA 00:00[download] 100% of    2.33MiB in 00:00:00 at 25.45MiB/s  
+[2026-04-30T11:53:39Z] New file downloaded for this URL.
+[2026-04-30T11:53:39Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T11:53:39Z] Copying downloaded files to downloads
+[2026-04-30T11:53:45Z] Processing URL #119:
+[2026-04-30T11:53:45Z] https://www.tiktok.com/@iggybellyy/video/7615319668697484557
+[TikTok] Extracting URL: https://www.tiktok.com/@iggybellyy/video/7615319668697484557
+[TikTok] 7615319668697484557: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7615319668697484557: Downloading 1 format(s): bytevc1_1080p_2247881-1
+[download] Destination: tmp_downloads/iggybellyy/@iggybellyy_2026-03-09_honey got me a new purse 👜 _7615319668697484557.mp4
+[download]   0.0% of    3.61MiB at  703.27KiB/s ETA 00:05[download]   0.1% of    3.61MiB at    1.64MiB/s ETA 00:02[download]   0.2% of    3.61MiB at    3.31MiB/s ETA 00:01[download]   0.4% of    3.61MiB at    6.26MiB/s ETA 00:00[download]   0.8% of    3.61MiB at   11.50MiB/s ETA 00:00[download]   1.7% of    3.61MiB at   20.57MiB/s ETA 00:00[download]   3.4% of    3.61MiB at   29.42MiB/s ETA 00:00[download]   6.9% of    3.61MiB at   42.06MiB/s ETA 00:00[download]  13.8% of    3.61MiB at   58.59MiB/s ETA 00:00[download]  27.7% of    3.61MiB at   82.21MiB/s ETA 00:00[download]  55.4% of    3.61MiB at  108.48MiB/s ETA 00:00[download] 100.0% of    3.61MiB at   77.95MiB/s ETA 00:00[download] 100% of    3.61MiB in 00:00:00 at 14.07MiB/s  
+[2026-04-30T11:53:46Z] New file downloaded for this URL.
+[2026-04-30T11:53:46Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T11:53:46Z] Copying downloaded files to downloads
+[2026-04-30T11:53:53Z] Preparing commit for: batch-23-after-115-successful-downloads
+[2026-04-30T11:53:53Z] Removing video files larger than 90MB from: downloads
