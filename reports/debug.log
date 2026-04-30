@@ -10132,3 +10132,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-04-30T14:23:17Z] Copying downloaded files to downloads
 [2026-04-30T14:23:18Z] Preparing commit for: batch-26-after-130-successful-downloads
 [2026-04-30T14:23:18Z] Removing video files larger than 90MB from: downloads
+[main 983e895] Add downloaded TikTok files batch-26-after-130-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 "downloads/karaleighcannella/@karaleighcannella_2025-02-06_can\342\200\231t spell gaga without GAG \342\255\220\357\270\217\360\237\226\244 @ladygaga @Mastercard @Christopher A.._7468449585149644075.mp4"
+ create mode 100644 "downloads/karaleighcannella/@karaleighcannella_2025-02-08_Replying to @heyawaho full video no cuts \360\237\247\216\360\237\217\276\342\200\215\342\231\200\357\270\217\360\237\226\244\342\255\220\357\270\217 @Christophe_7468835878408932650.mp4"
+ create mode 100644 "downloads/karaleighcannella/@karaleighcannella_2025-02-08_the cutest dance \360\237\245\271 dc\357\274\232 @zoifishh @FKA twigs _7469182593498631470.mp4"
+ create mode 100644 "downloads/karaleighcannella/@karaleighcannella_2025-03-06_a very very special project with @Taylor Bickett is OUTTTT!!! here\342\200\231s ..._7478844404904676654.mp4"
+ create mode 100644 "downloads/karaleighcannella/@karaleighcannella_2025-03-08_queen\342\255\220\357\270\217 dc @Hope Divine _7479228753747479850.mp4"
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   e531211..983e895  HEAD -> main
+[2026-04-30T14:23:37Z] Batch committed and pushed successfully: batch-26-after-130-successful-downloads
+[2026-04-30T14:23:37Z] Processing URL #132:
+[2026-04-30T14:23:37Z] https://www.tiktok.com/@karaleighcannella/video/7479234556843789610
+[TikTok] Extracting URL: https://www.tiktok.com/@karaleighcannella/video/7479234556843789610
+[TikTok] 7479234556843789610: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7479234556843789610: Downloading 1 format(s): bytevc1_1080p_3181081-1
+[download] Destination: tmp_downloads/karaleighcannella/@karaleighcannella_2025-03-08_need this song released asap @kwn _7479234556843789610.mp4
+[download]   0.0% of    6.87MiB at  Unknown B/s ETA Unknown[download]   0.0% of    6.87MiB at  Unknown B/s ETA Unknown[download]   0.1% of    6.87MiB at  Unknown B/s ETA Unknown[download]   0.2% of    6.87MiB at   11.77MiB/s ETA 00:00  [download]   0.4% of    6.87MiB at   18.99MiB/s ETA 00:00[download]   0.9% of    6.87MiB at   31.38MiB/s ETA 00:00[download]   1.8% of    6.87MiB at   39.69MiB/s ETA 00:00[download]   3.6% of    6.87MiB at   56.76MiB/s ETA 00:00[download]   7.3% of    6.87MiB at   72.28MiB/s ETA 00:00[download]  14.5% of    6.87MiB at   76.33MiB/s ETA 00:00[download]  29.1% of    6.87MiB at   97.17MiB/s ETA 00:00[download]  58.2% of    6.87MiB at  132.85MiB/s ETA 00:00[download] 100.0% of    6.87MiB at   82.16MiB/s ETA 00:00[download] 100% of    6.87MiB in 00:00:00 at 19.90MiB/s  
+[2026-04-30T14:23:38Z] New file downloaded for this URL.
+[2026-04-30T14:23:38Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T14:23:38Z] Copying downloaded files to downloads
+[2026-04-30T14:23:39Z] Processing URL #133:
+[2026-04-30T14:23:39Z] https://www.tiktok.com/@karaleighcannella/video/7481057288506166574
+[TikTok] Extracting URL: https://www.tiktok.com/@karaleighcannella/video/7481057288506166574
+[TikTok] 7481057288506166574: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7481057288506166574: Downloading 1 format(s): bytevc1_1080p_1465958-1
+[download] Destination: tmp_downloads/karaleighcannella/@karaleighcannella_2025-03-12_paint yo nailsss. @kwn dc： me 💅🏽 _7481057288506166574.mp4
+[download]   0.0% of    5.03MiB at  Unknown B/s ETA Unknown[download]   0.1% of    5.03MiB at  Unknown B/s ETA Unknown[download]   0.1% of    5.03MiB at    6.48MiB/s ETA 00:00  [download]   0.3% of    5.03MiB at   10.90MiB/s ETA 00:00[download]   0.6% of    5.03MiB at   18.10MiB/s ETA 00:00[download]   1.2% of    5.03MiB at   30.01MiB/s ETA 00:00[download]   2.5% of    5.03MiB at   38.25MiB/s ETA 00:00[download]   5.0% of    5.03MiB at   50.75MiB/s ETA 00:00[download]   9.9% of    5.03MiB at   62.39MiB/s ETA 00:00[download]  19.9% of    5.03MiB at   81.56MiB/s ETA 00:00[download]  39.8% of    5.03MiB at  109.69MiB/s ETA 00:00[download]  79.5% of    5.03MiB at  106.35MiB/s ETA 00:00[download] 100.0% of    5.03MiB at   47.69MiB/s ETA 00:00[download] 100% of    5.03MiB in 00:00:00 at 16.58MiB/s  
+[2026-04-30T14:23:40Z] New file downloaded for this URL.
+[2026-04-30T14:23:40Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T14:23:40Z] Copying downloaded files to downloads
+[2026-04-30T14:23:41Z] Processing URL #134:
+[2026-04-30T14:23:41Z] https://www.tiktok.com/@karaleighcannella/video/7484036082179247406
+[TikTok] Extracting URL: https://www.tiktok.com/@karaleighcannella/video/7484036082179247406
+[TikTok] 7484036082179247406: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7484036082179247406: Downloading 1 format(s): bytevc1_1080p_1200613-1
+[download] Destination: tmp_downloads/karaleighcannella/@karaleighcannella_2025-03-20_@Urban Outfitters WELCOME TO THE DESERT 🏜️ _7484036082179247406.mp4
+[download]   0.0% of    2.40MiB at  815.54KiB/s ETA 00:03[download]   0.1% of    2.40MiB at    1.77MiB/s ETA 00:01[download]   0.3% of    2.40MiB at    3.52MiB/s ETA 00:00[download]   0.6% of    2.40MiB at    6.52MiB/s ETA 00:00[download]   1.3% of    2.40MiB at   11.33MiB/s ETA 00:00[download]   2.6% of    2.40MiB at   20.14MiB/s ETA 00:00[download]   5.2% of    2.40MiB at   30.77MiB/s ETA 00:00[download]  10.4% of    2.40MiB at   45.11MiB/s ETA 00:00[download]  20.8% of    2.40MiB at   64.45MiB/s ETA 00:00[download]  41.6% of    2.40MiB at   90.35MiB/s ETA 00:00[download]  83.3% of    2.40MiB at   62.70MiB/s ETA 00:00[download] 100.0% of    2.40MiB at   69.16MiB/s ETA 00:00[download] 100% of    2.40MiB in 00:00:00 at 12.82MiB/s  
+[2026-04-30T14:23:42Z] New file downloaded for this URL.
+[2026-04-30T14:23:42Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T14:23:42Z] Copying downloaded files to downloads
+[2026-04-30T14:23:43Z] Processing URL #135:
+[2026-04-30T14:23:43Z] https://www.tiktok.com/@karaleighcannella/video/7484332871155551531
+[TikTok] Extracting URL: https://www.tiktok.com/@karaleighcannella/video/7484332871155551531
+[TikTok] 7484332871155551531: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7484332871155551531: Downloading 1 format(s): bytevc1_1080p_1394689-1
+[download] Destination: tmp_downloads/karaleighcannella/@karaleighcannella_2025-03-21_getaway fit check 😌 all from @Urban Outfitters 💋 which ones ur fav !!？ _7484332871155551531.mp4
+[download]   0.0% of    1.95MiB at  Unknown B/s ETA Unknown[download]   0.1% of    1.95MiB at  Unknown B/s ETA Unknown[download]   0.3% of    1.95MiB at    5.99MiB/s ETA 00:00  [download]   0.7% of    1.95MiB at   10.01MiB/s ETA 00:00[download]   1.5% of    1.95MiB at   16.75MiB/s ETA 00:00[download]   3.1% of    1.95MiB at   27.84MiB/s ETA 00:00[download]   6.3% of    1.95MiB at   38.75MiB/s ETA 00:00[download]  12.7% of    1.95MiB at   57.40MiB/s ETA 00:00[download]  25.5% of    1.95MiB at   79.13MiB/s ETA 00:00[download]  51.1% of    1.95MiB at  101.64MiB/s ETA 00:00[download] 100.0% of    1.95MiB at  141.54MiB/s ETA 00:00[download] 100% of    1.95MiB in 00:00:00 at 16.41MiB/s  
+[2026-04-30T14:23:44Z] New file downloaded for this URL.
+[2026-04-30T14:23:44Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T14:23:44Z] Copying downloaded files to downloads
+[2026-04-30T14:23:45Z] Processing URL #136:
+[2026-04-30T14:23:45Z] https://www.tiktok.com/@karaleighcannella/video/7484699406655098155
+[TikTok] Extracting URL: https://www.tiktok.com/@karaleighcannella/video/7484699406655098155
+[TikTok] 7484699406655098155: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7484699406655098155: Downloading 1 format(s): bytevc1_1080p_2900715-1
+[download] Destination: tmp_downloads/karaleighcannella/@karaleighcannella_2025-03-22_THE @Urban Outfitters GIRLIES ARE DANCING 😌 @Madeleine Adwoa ｜ 💃🏾💄 @_7484699406655098155.mp4
+[download]   0.0% of    3.35MiB at  Unknown B/s ETA Unknown[download]   0.1% of    3.35MiB at  Unknown B/s ETA Unknown[download]   0.2% of    3.35MiB at  Unknown B/s ETA Unknown[download]   0.4% of    3.35MiB at   11.36MiB/s ETA 00:00  [download]   0.9% of    3.35MiB at   18.23MiB/s ETA 00:00[download]   1.8% of    3.35MiB at   30.45MiB/s ETA 00:00[download]   3.7% of    3.35MiB at   38.48MiB/s ETA 00:00[download]   7.4% of    3.35MiB at   53.48MiB/s ETA 00:00[download]  14.9% of    3.35MiB at   72.34MiB/s ETA 00:00[download]  29.8% of    3.35MiB at  103.99MiB/s ETA 00:00[download]  59.6% of    3.35MiB at  151.26MiB/s ETA 00:00[download] 100.0% of    3.35MiB at  174.97MiB/s ETA 00:00[download] 100% of    3.35MiB in 00:00:00 at 41.86MiB/s  
+[2026-04-30T14:23:46Z] New file downloaded for this URL.
+[2026-04-30T14:23:46Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-04-30T14:23:46Z] Copying downloaded files to downloads
+[2026-04-30T14:23:47Z] Preparing commit for: batch-27-after-135-successful-downloads
+[2026-04-30T14:23:47Z] Removing video files larger than 90MB from: downloads
