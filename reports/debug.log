@@ -18945,3 +18945,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-05-02T14:14:23Z] Copying downloaded files to downloads
 [2026-05-02T14:14:32Z] Preparing commit for: batch-104-after-520-successful-downloads
 [2026-05-02T14:14:32Z] Removing video files larger than 90MB from: downloads
+[main 3c3b34a] Add downloaded TikTok files batch-104-after-520-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/rhegancoursey/@rhegancoursey_2026-02-05_Activating the bob _7603521657650679071.mp4
+ create mode 100644 downloads/rhegancoursey/@rhegancoursey_2026-02-06_The bob makes every fit better _7603855342061030687.mp4
+ create mode 100644 "downloads/rhegancoursey/@rhegancoursey_2026-02-07_Come with me to my FAVORITE appointment ever \342\234\215\360\237\217\273\360\237\221\201\357\270\217 the best confidence._7604232335470382367.mp4"
+ create mode 100644 downloads/rhegancoursey/@rhegancoursey_2026-02-07_Errrrbodyyyy_7604266506247081247.mp4
+ create mode 100644 downloads/rhegancoursey/@rhegancoursey_2026-02-07_This new I am gia set is so kill bill coded _7604234459788922143.mp4
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   6a8c65b..3c3b34a  HEAD -> main
+[2026-05-02T14:14:41Z] Batch committed and pushed successfully: batch-104-after-520-successful-downloads
+[2026-05-02T14:14:41Z] Processing URL #522:
+[2026-05-02T14:14:41Z] https://www.tiktok.com/@rhegancoursey/video/7604572345189158175
+[TikTok] Extracting URL: https://www.tiktok.com/@rhegancoursey/video/7604572345189158175
+[TikTok] 7604572345189158175: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7604572345189158175: Downloading 1 format(s): bytevc1_1080p_1317864-1
+[download] Destination: tmp_downloads/rhegancoursey/@rhegancoursey_2026-02-08_HAPPPYYYY SUNDAY 🏈 who are y’all rooting for？？ _7604572345189158175.mp4
+[download]   0.0% of    4.86MiB at  Unknown B/s ETA Unknown[download]   0.1% of    4.86MiB at  Unknown B/s ETA Unknown[download]   0.1% of    4.86MiB at  Unknown B/s ETA Unknown[download]   0.3% of    4.86MiB at   11.63MiB/s ETA 00:00  [download]   0.6% of    4.86MiB at   19.17MiB/s ETA 00:00[download]   1.3% of    4.86MiB at    2.85MiB/s ETA 00:01[download]   2.6% of    4.86MiB at    2.85MiB/s ETA 00:01[download]   5.1% of    4.86MiB at    3.73MiB/s ETA 00:01[download]  10.3% of    4.86MiB at    5.62MiB/s ETA 00:00[download]  20.6% of    4.86MiB at    8.86MiB/s ETA 00:00[download]  41.2% of    4.86MiB at   14.73MiB/s ETA 00:00[download]  82.3% of    4.86MiB at   21.84MiB/s ETA 00:00[download] 100.0% of    4.86MiB at   24.91MiB/s ETA 00:00[download] 100% of    4.86MiB in 00:00:00 at 8.77MiB/s   
+[2026-05-02T14:14:42Z] New file downloaded for this URL.
+[2026-05-02T14:14:42Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T14:14:42Z] Copying downloaded files to downloads
+[2026-05-02T14:14:51Z] Processing URL #523:
+[2026-05-02T14:14:51Z] https://www.tiktok.com/@rhegancoursey/video/7604597210625445151
+[TikTok] Extracting URL: https://www.tiktok.com/@rhegancoursey/video/7604597210625445151
+[TikTok] 7604597210625445151: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7604597210625445151: Downloading 1 format(s): h264_720p_1626213-1
+[download] Destination: tmp_downloads/rhegancoursey/@rhegancoursey_2026-02-08_Super Bowl vlogs begin 🏈 woot woot!! _7604597210625445151.mp4
+[download]   0.0% of   11.44MiB at  Unknown B/s ETA Unknown[download]   0.0% of   11.44MiB at  Unknown B/s ETA Unknown[download]   0.1% of   11.44MiB at    5.93MiB/s ETA 00:01  [download]   0.1% of   11.44MiB at   10.20MiB/s ETA 00:01[download]   0.3% of   11.44MiB at   17.21MiB/s ETA 00:00[download]   0.5% of   11.44MiB at    2.89MiB/s ETA 00:03[download]   1.1% of   11.44MiB at    2.88MiB/s ETA 00:03[download]   2.2% of   11.44MiB at    3.80MiB/s ETA 00:02[download]   4.4% of   11.44MiB at    5.76MiB/s ETA 00:01[download]   8.7% of   11.44MiB at    9.15MiB/s ETA 00:01[download]  17.5% of   11.44MiB at   15.25MiB/s ETA 00:00[download]  35.0% of   11.44MiB at   22.28MiB/s ETA 00:00[download]  69.9% of   11.44MiB at   39.79MiB/s ETA 00:00[download] 100.0% of   11.44MiB at   44.92MiB/s ETA 00:00[download] 100% of   11.44MiB in 00:00:00 at 21.45MiB/s  
+[2026-05-02T14:14:52Z] New file downloaded for this URL.
+[2026-05-02T14:14:52Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T14:14:52Z] Copying downloaded files to downloads
+[2026-05-02T14:15:01Z] Processing URL #524:
+[2026-05-02T14:15:01Z] https://www.tiktok.com/@rhegancoursey/video/7605143234746076447
+[TikTok] Extracting URL: https://www.tiktok.com/@rhegancoursey/video/7605143234746076447
+[TikTok] 7605143234746076447: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7605143234746076447: Downloading 1 format(s): bytevc1_720p_554843-1
+[download] Destination: tmp_downloads/rhegancoursey/@rhegancoursey_2026-02-10_No winter scaries this year, I won’t allow it 🧖🏻‍♀️📚🫧_7605143234746076447.mp4
+[download]   0.0% of    7.54MiB at  Unknown B/s ETA Unknown[download]   0.0% of    7.54MiB at  Unknown B/s ETA Unknown[download]   0.1% of    7.54MiB at    5.50MiB/s ETA 00:01  [download]   0.2% of    7.54MiB at    9.24MiB/s ETA 00:00[download]   0.4% of    7.54MiB at   14.90MiB/s ETA 00:00[download]   0.8% of    7.54MiB at    2.62MiB/s ETA 00:02[download]   1.6% of    7.54MiB at    2.78MiB/s ETA 00:02[download]   3.3% of    7.54MiB at    3.71MiB/s ETA 00:01[download]   6.6% of    7.54MiB at    5.51MiB/s ETA 00:01[download]  13.2% of    7.54MiB at    8.88MiB/s ETA 00:00[download]  26.5% of    7.54MiB at   14.68MiB/s ETA 00:00[download]  53.0% of    7.54MiB at   21.28MiB/s ETA 00:00[download] 100.0% of    7.54MiB at   29.33MiB/s ETA 00:00[download] 100% of    7.54MiB in 00:00:00 at 15.28MiB/s  
+[2026-05-02T14:15:02Z] New file downloaded for this URL.
+[2026-05-02T14:15:02Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T14:15:02Z] Copying downloaded files to downloads
+[2026-05-02T14:15:10Z] Processing URL #525:
+[2026-05-02T14:15:10Z] https://www.tiktok.com/@rhegancoursey/video/7605369918195830046
+[TikTok] Extracting URL: https://www.tiktok.com/@rhegancoursey/video/7605369918195830046
+[TikTok] 7605369918195830046: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7605369918195830046: Downloading 1 format(s): bytevc1_1080p_1098412-1
+[download] Destination: tmp_downloads/rhegancoursey/@rhegancoursey_2026-02-10_ON THE PURPLE APPPP ‘rhegan777’_7605369918195830046.mp4
+[download]   0.0% of    5.07MiB at  643.50KiB/s ETA 00:08[download]   0.1% of    5.07MiB at    1.43MiB/s ETA 00:03[download]   0.1% of    5.07MiB at    2.93MiB/s ETA 00:01[download]   0.3% of    5.07MiB at    5.56MiB/s ETA 00:00[download]   0.6% of    5.07MiB at   10.18MiB/s ETA 00:00[download]   1.2% of    5.07MiB at    3.24MiB/s ETA 00:01[download]   2.4% of    5.07MiB at    3.20MiB/s ETA 00:01[download]   4.9% of    5.07MiB at    4.26MiB/s ETA 00:01[download]   9.8% of    5.07MiB at    6.36MiB/s ETA 00:00[download]  19.7% of    5.07MiB at   10.03MiB/s ETA 00:00[download]  39.4% of    5.07MiB at   16.27MiB/s ETA 00:00[download]  78.9% of    5.07MiB at   25.25MiB/s ETA 00:00[download] 100.0% of    5.07MiB at   13.90MiB/s ETA 00:00[download] 100% of    5.07MiB in 00:00:00 at 7.56MiB/s   
+[2026-05-02T14:15:12Z] New file downloaded for this URL.
+[2026-05-02T14:15:12Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T14:15:12Z] Copying downloaded files to downloads
+[2026-05-02T14:15:21Z] Processing URL #526:
+[2026-05-02T14:15:21Z] https://www.tiktok.com/@rhegancoursey/video/7605739336880966942
+[TikTok] Extracting URL: https://www.tiktok.com/@rhegancoursey/video/7605739336880966942
+[TikTok] 7605739336880966942: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7605739336880966942: Downloading 1 format(s): bytevc1_720p_702321-1
+[download] Destination: tmp_downloads/rhegancoursey/@rhegancoursey_2026-02-11_Treating myself for Valentine’s Day💋_7605739336880966942.mp4
+[download]   0.1% of  895.82KiB at  Unknown B/s ETA Unknown[download]   0.3% of  895.82KiB at  Unknown B/s ETA Unknown[download]   0.8% of  895.82KiB at    6.68MiB/s ETA 00:00  [download]   1.7% of  895.82KiB at   10.25MiB/s ETA 00:00[download]   3.5% of  895.82KiB at    1.35MiB/s ETA 00:00[download]   7.0% of  895.82KiB at    2.62MiB/s ETA 00:00[download]  14.2% of  895.82KiB at    2.72MiB/s ETA 00:00[download]  28.5% of  895.82KiB at    3.65MiB/s ETA 00:00[download]  57.0% of  895.82KiB at    5.51MiB/s ETA 00:00[download] 100.0% of  895.82KiB at    7.85MiB/s ETA 00:00[download] 100% of  895.82KiB in 00:00:00 at 2.33MiB/s   
+[2026-05-02T14:15:22Z] New file downloaded for this URL.
+[2026-05-02T14:15:22Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T14:15:22Z] Copying downloaded files to downloads
+[2026-05-02T14:15:31Z] Preparing commit for: batch-105-after-525-successful-downloads
+[2026-05-02T14:15:31Z] Removing video files larger than 90MB from: downloads
