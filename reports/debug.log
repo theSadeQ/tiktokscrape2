@@ -15439,3 +15439,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-05-02T13:43:06Z] Copying downloaded files to downloads
 [2026-05-02T13:43:08Z] Preparing commit for: batch-52-after-260-successful-downloads
 [2026-05-02T13:43:08Z] Removing video files larger than 90MB from: downloads
+[main dc71ec8] Add downloaded TikTok files batch-52-after-260-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/mcennnaalynn/@mcennnaalynn_2026-03-20_Like do u want my help or no #fyp _7619453770870557966.mp4
+ create mode 100644 downloads/mcennnaalynn/@mcennnaalynn_2026-03-20_Replying to @leo.katykitty ok #fyp _7619358573960760590.mp4
+ create mode 100644 downloads/mcennnaalynn/@mcennnaalynn_2026-03-21_Replying to @. Ok #fyp _7619802190856654093.mp4
+ create mode 100644 downloads/mcennnaalynn/@mcennnaalynn_2026-03-21_Yes #fyp _7619767039489576205.mp3
+ create mode 100644 downloads/mcennnaalynn/@mcennnaalynn_2026-03-22_Happy Sunday Bebe #fyp _7620130074280398094.mp4
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   e88bb41..dc71ec8  HEAD -> main
+[2026-05-02T13:43:14Z] Batch committed and pushed successfully: batch-52-after-260-successful-downloads
+[2026-05-02T13:43:14Z] Processing URL #261:
+[2026-05-02T13:43:14Z] https://www.tiktok.com/@mcennnaalynn/video/7620148158613458190
+[TikTok] Extracting URL: https://www.tiktok.com/@mcennnaalynn/video/7620148158613458190
+[TikTok] 7620148158613458190: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7620148158613458190: Downloading 1 format(s): bytevc1_1080p_1168807-1
+[download] Destination: tmp_downloads/mcennnaalynn/@mcennnaalynn_2026-03-22_I thought this was so funny #fyp _7620148158613458190.mp4
+[download]   0.1% of    1.15MiB at  Unknown B/s ETA Unknown[download]   0.3% of    1.15MiB at  Unknown B/s ETA Unknown[download]   0.6% of    1.15MiB at  Unknown B/s ETA Unknown[download]   1.3% of    1.15MiB at    1.58MiB/s ETA 00:00  [download]   2.6% of    1.15MiB at    2.95MiB/s ETA 00:00[download]   5.4% of    1.15MiB at    2.89MiB/s ETA 00:00[download]  10.8% of    1.15MiB at    3.77MiB/s ETA 00:00[download]  21.7% of    1.15MiB at    5.54MiB/s ETA 00:00[download]  43.5% of    1.15MiB at    8.89MiB/s ETA 00:00[download]  87.1% of    1.15MiB at   14.77MiB/s ETA 00:00[download] 100.0% of    1.15MiB at   16.22MiB/s ETA 00:00[download] 100% of    1.15MiB in 00:00:00 at 6.05MiB/s   
+[2026-05-02T13:43:15Z] New file downloaded for this URL.
+[2026-05-02T13:43:15Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T13:43:15Z] Copying downloaded files to downloads
+[2026-05-02T13:43:17Z] Processing URL #262:
+[2026-05-02T13:43:17Z] https://www.tiktok.com/@mcennnaalynn/video/7620183710352035085
+[TikTok] Extracting URL: https://www.tiktok.com/@mcennnaalynn/video/7620183710352035085
+[TikTok] 7620183710352035085: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7620183710352035085: Downloading 1 format(s): audio
+[download] Destination: tmp_downloads/mcennnaalynn/@mcennnaalynn_2026-03-22_Jokes on him #fyp _7620183710352035085.mp3
+[download]   0.5% of  198.85KiB at  Unknown B/s ETA Unknown[download]   1.5% of  198.85KiB at  Unknown B/s ETA Unknown[download]   3.5% of  198.85KiB at  Unknown B/s ETA Unknown[download]   7.5% of  198.85KiB at   13.29MiB/s ETA 00:00  [download]  15.6% of  198.85KiB at   19.87MiB/s ETA 00:00[download]  31.7% of  198.85KiB at    7.05MiB/s ETA 00:00[download]  63.9% of  198.85KiB at    7.45MiB/s ETA 00:00[download] 100.0% of  198.85KiB at   10.26MiB/s ETA 00:00[download] 100% of  198.85KiB in 00:00:00 at 3.20MiB/s   
+[2026-05-02T13:43:18Z] New file downloaded for this URL.
+[2026-05-02T13:43:18Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T13:43:18Z] Copying downloaded files to downloads
+[2026-05-02T13:43:20Z] Processing URL #263:
+[2026-05-02T13:43:20Z] https://www.tiktok.com/@mcennnaalynn/video/7620471977769241870
+[TikTok] Extracting URL: https://www.tiktok.com/@mcennnaalynn/video/7620471977769241870
+[TikTok] 7620471977769241870: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7620471977769241870: Downloading 1 format(s): bytevc1_1080p_963366-1
+[download] Destination: tmp_downloads/mcennnaalynn/@mcennnaalynn_2026-03-23_I can’t stop #fyp _7620471977769241870.mp4
+[download]   0.1% of  841.06KiB at  570.11KiB/s ETA 00:01[download]   0.4% of  841.06KiB at    1.34MiB/s ETA 00:00[download]   0.8% of  841.06KiB at    2.76MiB/s ETA 00:00[download]   1.8% of  841.06KiB at    5.32MiB/s ETA 00:00[download]   3.7% of  841.06KiB at    9.57MiB/s ETA 00:00[download]   7.5% of  841.06KiB at    6.82MiB/s ETA 00:00[download]  15.1% of  841.06KiB at    8.54MiB/s ETA 00:00[download]  30.3% of  841.06KiB at    8.89MiB/s ETA 00:00[download]  60.8% of  841.06KiB at   11.76MiB/s ETA 00:00[download] 100.0% of  841.06KiB at   14.33MiB/s ETA 00:00[download] 100% of  841.06KiB in 00:00:00 at 8.04MiB/s   
+[2026-05-02T13:43:21Z] New file downloaded for this URL.
+[2026-05-02T13:43:21Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T13:43:21Z] Copying downloaded files to downloads
+[2026-05-02T13:43:23Z] Processing URL #264:
+[2026-05-02T13:43:23Z] https://www.tiktok.com/@mcennnaalynn/video/7620529675642670349
+[TikTok] Extracting URL: https://www.tiktok.com/@mcennnaalynn/video/7620529675642670349
+[TikTok] 7620529675642670349: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7620529675642670349: Downloading 1 format(s): bytevc1_1080p_751470-1
+[download] Destination: tmp_downloads/mcennnaalynn/@mcennnaalynn_2026-03-23_Replying to @Marionette🧁🎀🐰 ok #fyp _7620529675642670349.mp4
+[download]   0.1% of  996.85KiB at  Unknown B/s ETA Unknown[download]   0.3% of  996.85KiB at    2.18MiB/s ETA 00:00  [download]   0.7% of  996.85KiB at    4.23MiB/s ETA 00:00[download]   1.5% of  996.85KiB at    7.46MiB/s ETA 00:00[download]   3.1% of  996.85KiB at   13.08MiB/s ETA 00:00[download]   6.3% of  996.85KiB at    6.65MiB/s ETA 00:00[download]  12.7% of  996.85KiB at    6.87MiB/s ETA 00:00[download]  25.6% of  996.85KiB at    9.46MiB/s ETA 00:00[download]  51.3% of  996.85KiB at   13.37MiB/s ETA 00:00[download] 100.0% of  996.85KiB at   18.71MiB/s ETA 00:00[download] 100% of  996.85KiB in 00:00:00 at 4.33MiB/s   
+[2026-05-02T13:43:24Z] New file downloaded for this URL.
+[2026-05-02T13:43:24Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T13:43:24Z] Copying downloaded files to downloads
+[2026-05-02T13:43:26Z] Processing URL #265:
+[2026-05-02T13:43:26Z] https://www.tiktok.com/@mcennnaalynn/video/7620575669122010382
+[TikTok] Extracting URL: https://www.tiktok.com/@mcennnaalynn/video/7620575669122010382
+[TikTok] 7620575669122010382: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7620575669122010382: Downloading 1 format(s): bytevc1_1080p_856394-1
+[download] Destination: tmp_downloads/mcennnaalynn/@mcennnaalynn_2026-03-23_My son is walking so I made this to cry #fyp _7620575669122010382.mp4
+[download]   0.0% of    3.15MiB at  Unknown B/s ETA Unknown[download]   0.1% of    3.15MiB at  Unknown B/s ETA Unknown[download]   0.2% of    3.15MiB at  Unknown B/s ETA Unknown[download]   0.5% of    3.15MiB at   10.78MiB/s ETA 00:00  [download]   1.0% of    3.15MiB at   17.91MiB/s ETA 00:00[download]   2.0% of    3.15MiB at    7.02MiB/s ETA 00:00[download]   3.9% of    3.15MiB at    9.66MiB/s ETA 00:00[download]   7.9% of    3.15MiB at    8.97MiB/s ETA 00:00[download]  15.8% of    3.15MiB at   11.87MiB/s ETA 00:00[download]  31.7% of    3.15MiB at   14.21MiB/s ETA 00:00[download]  63.5% of    3.15MiB at   20.80MiB/s ETA 00:00[download] 100.0% of    3.15MiB at   27.41MiB/s ETA 00:00[download] 100% of    3.15MiB in 00:00:00 at 10.60MiB/s  
+[2026-05-02T13:43:27Z] New file downloaded for this URL.
+[2026-05-02T13:43:27Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-02T13:43:27Z] Copying downloaded files to downloads
+[2026-05-02T13:43:29Z] Preparing commit for: batch-53-after-265-successful-downloads
+[2026-05-02T13:43:29Z] Removing video files larger than 90MB from: downloads
