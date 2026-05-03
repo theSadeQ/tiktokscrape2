@@ -11,17 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout target repo
         uses: actions/checkout@v4
         with:
+          repository: OWNER/REPO
+          path: repo
           fetch-depth: 1
+          # lfs: true # enable this if the repo uses Git LFS
 
-      - name: Create output directory
-        run: mkdir -p releases
-
-      - name: Archive each folder separately
+      - name: Archive each folder into split parts
+        shell: bash
         run: |
-          # List of folders to archive
+          set -euo pipefail
+
+          mkdir -p releases
+
+          cd repo
+
           folders=(
             "downloads/taliaafawaz"
             "downloads/the.johnsonbrothers"
@@ -31,32 +37,30 @@ jobs:
             "downloads/tuckercarlsonnetwork"
           )
 
-          # Loop folder-by-folder (safe for huge repos)
           for folder in "${folders[@]}"; do
-            echo "=============================="
-            echo "ARCHIVING: $folder"
-            echo "=============================="
+            echo "==== Processing: $folder ===="
 
-            # Create a safe folder name for the release assets
-            safe_name=$(echo $folder | tr '/' '-' )
+            if [ ! -d "$folder" ]; then
+              echo "Warning: folder does not exist: $folder"
+              continue
+            fi
 
-            # Make a tar.gz for this folder
-            echo "Creating $safe_name.tar.gz..."
-            tar -czf "$safe_name.tar.gz" "$folder"
+            safe=$(printf '%s' "$folder" | tr '/' '-')
 
-            echo "Splitting into 1GB parts..."
-            split -b 1024M -d -a 3 --numeric-suffixes=1 "$safe_name.tar.gz" "$safe_name.tar.gz."
+            mkdir -p "../releases/$safe"
 
-            # Move output to releases folder
-            mkdir -p "releases/$safe_name"
-            mv "$safe_name.tar.gz"* releases/$safe_name/
+            tar -czf - "$folder" | split \
+              -b 1024M \
+              -d \
+              -a 3 \
+              --numeric-suffixes=1 \
+              - "../releases/$safe/$safe.tar.gz."
 
-            echo "Done with $folder!"
+            echo "Finished: $folder"
           done
 
-      - name: Upload Release Assets
+      - name: Upload all parts to Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: folder-archives
-          name: "Folder Archives (Split Into Parts)"
-          files: releases/**/*   # Upload all folders, all parts
+          files: releases/**/*
