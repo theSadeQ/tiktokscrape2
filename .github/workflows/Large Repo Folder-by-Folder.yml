@@ -1,0 +1,62 @@
+name: Archive Large Repo Folder-by-Folder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Create output directory
+        run: mkdir -p releases
+
+      - name: Archive each folder separately
+        run: |
+          # List of folders to archive
+          folders=(
+            "downloads/taliaafawaz"
+            "downloads/the.johnsonbrothers"
+            "downloads/thedailyshow"
+            "downloads/thegnarliestcarly"
+            "downloads/tshi.oh"
+            "downloads/tuckercarlsonnetwork"
+          )
+
+          # Loop folder-by-folder (safe for huge repos)
+          for folder in "${folders[@]}"; do
+            echo "=============================="
+            echo "ARCHIVING: $folder"
+            echo "=============================="
+
+            # Create a safe folder name for the release assets
+            safe_name=$(echo $folder | tr '/' '-' )
+
+            # Make a tar.gz for this folder
+            echo "Creating $safe_name.tar.gz..."
+            tar -czf "$safe_name.tar.gz" "$folder"
+
+            echo "Splitting into 1GB parts..."
+            split -b 1024M -d -a 3 --numeric-suffixes=1 "$safe_name.tar.gz" "$safe_name.tar.gz."
+
+            # Move output to releases folder
+            mkdir -p "releases/$safe_name"
+            mv "$safe_name.tar.gz"* releases/$safe_name/
+
+            echo "Done with $folder!"
+          done
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: folder-archives
+          name: "Folder Archives (Split Into Parts)"
+          files: releases/**/*   # Upload all folders, all parts
