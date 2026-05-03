@@ -23831,3 +23831,70 @@ WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate 
 [2026-05-03T02:48:51Z] Copying downloaded files to downloads
 [2026-05-03T02:48:51Z] Preparing commit for: batch-6-after-30-successful-downloads
 [2026-05-03T02:48:51Z] Removing video files larger than 90MB from: downloads
+[main bae3165] Add downloaded TikTok files batch-6-after-30-successful-downloads [skip ci]
+ 7 files changed, 72 insertions(+)
+ create mode 100644 downloads/justageeker/@justageeker_2026-01-06_@OZARAUSA sweatsuits_7592105867693051150.mp4
+ create mode 100644 downloads/justageeker/@justageeker_2026-01-06_TikTok video #7592107674699910455_7592107674699910455.mp4
+ create mode 100644 downloads/justageeker/@justageeker_2026-01-08_TikTok video #7592846652902362381_7592846652902362381.mp4
+ create mode 100644 "downloads/justageeker/@justageeker_2026-01-08_You not gettin nothing but a \357\274\202batty maan\357\274\202, \357\274\202bomboclaat\357\274\202, \357\274\202fya fi dat\357\274\202..._7593049265279126839.mp4"
+ create mode 100644 downloads/justageeker/@justageeker_2026-01-10_Just confirming, deets are on my ig @justageeker_7593523678923492621.mp4
+To https://github.com/theSadeQ/tiktok-downloader-ignore90MB-2
+   661a59c..bae3165  HEAD -> main
+[2026-05-03T02:48:55Z] Batch committed and pushed successfully: batch-6-after-30-successful-downloads
+[2026-05-03T02:48:55Z] Processing URL #31:
+[2026-05-03T02:48:55Z] https://www.tiktok.com/@justageeker/video/7594091516826619191
+[TikTok] Extracting URL: https://www.tiktok.com/@justageeker/video/7594091516826619191
+[TikTok] 7594091516826619191: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7594091516826619191: Downloading 1 format(s): bytevc1_1080p_1228190-1
+[download] Destination: tmp_downloads/justageeker/@justageeker_2026-01-11_I forgot to get tiktoks but not pictures 😞😝_7594091516826619191.mp4
+[download]   0.0% of    2.21MiB at  Unknown B/s ETA Unknown[download]   0.1% of    2.21MiB at  Unknown B/s ETA Unknown[download]   0.3% of    2.21MiB at    5.90MiB/s ETA 00:00  [download]   0.7% of    2.21MiB at    9.73MiB/s ETA 00:00[download]   1.4% of    2.21MiB at   16.15MiB/s ETA 00:00[download]   2.8% of    2.21MiB at   12.96MiB/s ETA 00:00[download]   5.6% of    2.21MiB at   12.10MiB/s ETA 00:00[download]  11.3% of    2.21MiB at   15.18MiB/s ETA 00:00[download]  22.6% of    2.21MiB at   21.38MiB/s ETA 00:00[download]  45.3% of    2.21MiB at   27.88MiB/s ETA 00:00[download]  90.6% of    2.21MiB at   41.13MiB/s ETA 00:00[download] 100.0% of    2.21MiB at   43.92MiB/s ETA 00:00[download] 100% of    2.21MiB in 00:00:00 at 13.62MiB/s  
+[2026-05-03T02:48:56Z] New file downloaded for this URL.
+[2026-05-03T02:48:56Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-03T02:48:56Z] Copying downloaded files to downloads
+[2026-05-03T02:48:56Z] Processing URL #32:
+[2026-05-03T02:48:56Z] https://www.tiktok.com/@justageeker/video/7594908371845664055
+[TikTok] Extracting URL: https://www.tiktok.com/@justageeker/video/7594908371845664055
+[TikTok] 7594908371845664055: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7594908371845664055: Downloading 1 format(s): bytevc1_1080p_1446790-1
+[download] Destination: tmp_downloads/justageeker/@justageeker_2026-01-13_THIS IS A PROP🤬 #movieprops _7594908371845664055.mp4
+[download]   0.0% of    2.23MiB at  Unknown B/s ETA Unknown[download]   0.1% of    2.23MiB at  Unknown B/s ETA Unknown[download]   0.3% of    2.23MiB at  Unknown B/s ETA Unknown[download]   0.7% of    2.23MiB at   11.01MiB/s ETA 00:00  [download]   1.4% of    2.23MiB at   18.27MiB/s ETA 00:00[download]   2.8% of    2.23MiB at    6.33MiB/s ETA 00:00[download]   5.6% of    2.23MiB at    8.35MiB/s ETA 00:00[download]  11.2% of    2.23MiB at    8.22MiB/s ETA 00:00[download]  22.4% of    2.23MiB at   11.36MiB/s ETA 00:00[download]  44.8% of    2.23MiB at   15.47MiB/s ETA 00:00[download]  89.6% of    2.23MiB at   22.99MiB/s ETA 00:00[download] 100.0% of    2.23MiB at   24.02MiB/s ETA 00:00[download] 100% of    2.23MiB in 00:00:00 at 9.06MiB/s   
+[2026-05-03T02:48:58Z] New file downloaded for this URL.
+[2026-05-03T02:48:58Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-03T02:48:58Z] Copying downloaded files to downloads
+[2026-05-03T02:48:58Z] Processing URL #33:
+[2026-05-03T02:48:58Z] https://www.tiktok.com/@justageeker/video/7595086609473719566
+[TikTok] Extracting URL: https://www.tiktok.com/@justageeker/video/7595086609473719566
+[TikTok] 7595086609473719566: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7595086609473719566: Downloading 1 format(s): bytevc1_1080p_1371747-1
+[download] Destination: tmp_downloads/justageeker/@justageeker_2026-01-14_can't wait to style these frl_7595086609473719566.mp4
+[download]   0.0% of    2.59MiB at  Unknown B/s ETA Unknown[download]   0.1% of    2.59MiB at  Unknown B/s ETA Unknown[download]   0.3% of    2.59MiB at    6.78MiB/s ETA 00:00  [download]   0.6% of    2.59MiB at   10.97MiB/s ETA 00:00[download]   1.2% of    2.59MiB at   16.50MiB/s ETA 00:00[download]   2.4% of    2.59MiB at    5.34MiB/s ETA 00:00[download]   4.8% of    2.59MiB at    5.71MiB/s ETA 00:00[download]   9.6% of    2.59MiB at    7.18MiB/s ETA 00:00[download]  19.3% of    2.59MiB at    9.18MiB/s ETA 00:00[download]  38.6% of    2.59MiB at   12.96MiB/s ETA 00:00[download]  77.3% of    2.59MiB at   19.92MiB/s ETA 00:00[download] 100.0% of    2.59MiB at   23.56MiB/s ETA 00:00[download] 100% of    2.59MiB in 00:00:00 at 10.01MiB/s  
+[2026-05-03T02:48:59Z] New file downloaded for this URL.
+[2026-05-03T02:48:59Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-03T02:48:59Z] Copying downloaded files to downloads
+[2026-05-03T02:48:59Z] Processing URL #34:
+[2026-05-03T02:48:59Z] https://www.tiktok.com/@justageeker/video/7595653228923063565
+[TikTok] Extracting URL: https://www.tiktok.com/@justageeker/video/7595653228923063565
+[TikTok] 7595653228923063565: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7595653228923063565: Downloading 1 format(s): bytevc1_1080p_727223-1
+[download] Destination: tmp_downloads/justageeker/@justageeker_2026-01-15_geekpa appreciation post_7595653228923063565.mp4
+[download]   0.1% of 1008.01KiB at  Unknown B/s ETA Unknown[download]   0.3% of 1008.01KiB at  Unknown B/s ETA Unknown[download]   0.7% of 1008.01KiB at    6.61MiB/s ETA 00:00  [download]   1.5% of 1008.01KiB at   10.80MiB/s ETA 00:00[download]   3.1% of 1008.01KiB at   16.54MiB/s ETA 00:00[download]   6.2% of 1008.01KiB at    5.14MiB/s ETA 00:00[download]  12.6% of 1008.01KiB at    5.80MiB/s ETA 00:00[download]  25.3% of 1008.01KiB at    7.39MiB/s ETA 00:00[download]  50.7% of 1008.01KiB at   10.09MiB/s ETA 00:00[download] 100.0% of 1008.01KiB at   14.09MiB/s ETA 00:00[download] 100% of 1008.01KiB in 00:00:00 at 4.55MiB/s   
+[2026-05-03T02:49:00Z] New file downloaded for this URL.
+[2026-05-03T02:49:00Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-03T02:49:00Z] Copying downloaded files to downloads
+[2026-05-03T02:49:01Z] Processing URL #35:
+[2026-05-03T02:49:01Z] https://www.tiktok.com/@justageeker/video/7596610836693568823
+[TikTok] Extracting URL: https://www.tiktok.com/@justageeker/video/7596610836693568823
+[TikTok] 7596610836693568823: Downloading webpage
+WARNING: [TikTok] The extractor is attempting impersonation, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
+[info] 7596610836693568823: Downloading 1 format(s): bytevc1_1080p_1840878-1
+[download] Destination: tmp_downloads/justageeker/@justageeker_2026-01-18_family affair_7596610836693568823.mp4
+[download]   0.1% of    1.62MiB at  379.09KiB/s ETA 00:04[download]   0.2% of    1.62MiB at  964.36KiB/s ETA 00:01[download]   0.4% of    1.62MiB at    1.99MiB/s ETA 00:00[download]   0.9% of    1.62MiB at    3.91MiB/s ETA 00:00[download]   1.9% of    1.62MiB at    7.27MiB/s ETA 00:00[download]   3.8% of    1.62MiB at    6.26MiB/s ETA 00:00[download]   7.7% of    1.62MiB at    7.43MiB/s ETA 00:00[download]  15.4% of    1.62MiB at    8.19MiB/s ETA 00:00[download]  30.9% of    1.62MiB at   10.97MiB/s ETA 00:00[download]  61.8% of    1.62MiB at   15.48MiB/s ETA 00:00[download] 100.0% of    1.62MiB at   20.31MiB/s ETA 00:00[download] 100% of    1.62MiB in 00:00:00 at 7.66MiB/s   
+[2026-05-03T02:49:02Z] New file downloaded for this URL.
+[2026-05-03T02:49:02Z] Removing video files larger than 90MB from: tmp_downloads
+[2026-05-03T02:49:02Z] Copying downloaded files to downloads
+[2026-05-03T02:49:02Z] Preparing commit for: batch-7-after-35-successful-downloads
+[2026-05-03T02:49:02Z] Removing video files larger than 90MB from: downloads
