@@ -1,0 +1,60 @@
+name: Download & Split Repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_repo:
+        description: "GitHub repo (OWNER/REPO)"
+        required: true
+        default: "torvalds/linux"
+
+jobs:
+  split-and-release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Set variables
+        run: |
+          echo "TARGET_REPO=${{ github.event.inputs.target_repo }}" >> $GITHUB_ENV
+          echo "REPO_NAME=$(basename ${{ github.event.inputs.target_repo }})" >> $GITHUB_ENV
+          echo "TAG=split-$(date +%Y%m%d-%H%M%S)" >> $GITHUB_ENV
+
+      - name: Clone target repository
+        run: |
+          git clone --depth=1 https://github.com/${TARGET_REPO}.git
+
+      - name: Archive repository
+        run: |
+          tar -czf repo.tar.gz ${REPO_NAME}
+
+      - name: Split into 1GB parts
+        run: |
+          split -b 1024M repo.tar.gz repo.part-
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          name: "Split Repo (${{ env.TAG }})"
+          body: "Split of ${TARGET_REPO}"
+          files: repo.part-*
+
+      - name: Generate download URLs
+        run: |
+          RELEASE_URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}"
+
+          echo "# Download URLs for ${TARGET_REPO}" > blob_urls.txt
+          echo "" >> blob_urls.txt
+
+          for f in repo.part-*; do
+            echo "${RELEASE_URL}/${f}" >> blob_urls.txt
+          done
+
+      - name: Upload URL list
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          files: blob_urls.txt
