@@ -14,7 +14,7 @@ jobs:
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
-          repository: theSadeQ/tiktok-downloader-ignore90MB-3
+          repository: theSadeQ/tiktok-downloader-ignore90MB-2
           path: repo
           fetch-depth: 1
           # lfs: true # enable this if the repo uses Git LFS
