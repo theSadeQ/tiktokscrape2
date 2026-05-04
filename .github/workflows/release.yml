@@ -14,7 +14,7 @@ jobs:
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
-          repository: theSadeQ/tiktok-downloader-ignore90MB-2
+          repository: theSadeQ/tiktok-downloader-ignore90MB-3
           path: repo
           fetch-depth: 1
           # lfs: true # enable this if the repo uses Git LFS
@@ -29,12 +29,16 @@ jobs:
           cd repo
 
           folders=(
-            "downloads/taliaafawaz"
-            "downloads/the.johnsonbrothers"
-            "downloads/thedailyshow"
-            "downloads/thegnarliestcarly"
-            "downloads/tshi.oh"
-            "downloads/tuckercarlsonnetwork"
+            "downloads/lucienlorraine"
+            "downloads/mackenzie.quinn"
+            "downloads/makurashoyo"
+            "downloads/maryana.kh"
+            "downloads/mia.sor"
+            "downloads/minnarosaweber"
+            "downloads/mylifewithmils"
+            "downloads/natelisabeth115"
+            "downloads/olivianeill"
+            "downloads/oliviaphillipps"
           )
 
           for folder in "${folders[@]}"; do
