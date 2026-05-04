@@ -29,16 +29,7 @@ jobs:
           cd repo
 
           folders=(
-            "downloads/lucienlorraine"
-            "downloads/mackenzie.quinn"
-            "downloads/makurashoyo"
-            "downloads/maryana.kh"
-            "downloads/mia.sor"
-            "downloads/minnarosaweber"
-            "downloads/mylifewithmils"
-            "downloads/natelisabeth115"
-            "downloads/olivianeill"
-            "downloads/oliviaphillipps"
+            "downloads"
           )
 
           for folder in "${folders[@]}"; do
